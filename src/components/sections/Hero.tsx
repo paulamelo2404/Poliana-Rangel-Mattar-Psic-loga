@@ -169,7 +169,7 @@ const Hero = ({
             <p className="text-xs sm:text-sm text-gray-500 mb-6 lg:mb-8">{crp}</p>
 
             {/* Área de frases animadas */}
-            <div className="mb-8 lg:mb-10 min-h-[140px] sm:min-h-[160px] lg:min-h-[180px]">
+            <div className="mb-8 lg:mb-10 min-h-35 sm:min-h-40 lg:min-h-45">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentPhrase}
@@ -277,7 +277,7 @@ const Hero = ({
                 <img 
                   src={photoUrl}
                   alt={`Dra. ${name}`}
-                  className="relative z-10 w-full h-auto max-h-[500px] lg:max-h-none object-contain drop-shadow-2xl"
+                  className="relative z-10 w-full h-auto max-h-125 lg:max-h-none object-contain drop-shadow-2xl"
                   style={{
                     filter: `drop-shadow(0 10px 20px ${colors.primary}40)`
                   }}
