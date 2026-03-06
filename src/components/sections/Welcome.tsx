@@ -73,7 +73,7 @@ const Welcome = ({ name, photoUrl, colors }: WelcomeProps) => {
                   <span className="font-semibold" style={{ color: colors.secondary }}>
                     Sou a Dra. {name}
                   </span> 
-                  . Com mais de 11 anos de experiência em psicoterapia clínica, 
+                  . Com muita experiência em psicoterapia clínica, 
                   meu propósito é caminhar ao seu lado para encontrar as respostas 
                   que você procura. Já ajudei inúmeras pessoas, no Brasil e no 
                   exterior, a transformarem suas histórias e superarem desafios 

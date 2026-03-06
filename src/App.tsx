@@ -2,6 +2,7 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
 import Welcome from './components/sections/Welcome'
+import Services from './components/sections/Services' // Import adicionado
 
 function App() {
   // Dados da Psicóloga
@@ -25,7 +26,6 @@ function App() {
       <Navbar name={psychologistData.name} />
       
       <main>
-        {/* Hero Section com carrossel de frases */}
         <Hero 
           name={psychologistData.name}
           title={psychologistData.title}
@@ -35,15 +35,16 @@ function App() {
           colors={psychologistData.colors}
         />
         
-        {/* Seção de Boas-vindas */}
         <Welcome 
           name={psychologistData.name}
           photoUrl={psychologistData.welcomePhoto}
           colors={psychologistData.colors}
         />
         
-        {/* Aqui vão as próximas seções:
-            - Serviços
+        {/* Nova seção de Serviços */}
+        <Services colors={psychologistData.colors} />
+        
+        {/* Próximas seções:
             - FAQ
             - Contato 
         */}
