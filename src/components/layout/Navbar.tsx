@@ -26,7 +26,7 @@ const Navbar = ({ name, logoUrl }: NavbarProps) => {
     { label: 'Serviços', href: '#services' },
     { label: 'Sobre', href: '#about' },
     { label: 'Importância', href: '#importance' },
-    { label: 'Contato', href: '#contato' },
+    
   ];
 
   // Número do WhatsApp (formatado)

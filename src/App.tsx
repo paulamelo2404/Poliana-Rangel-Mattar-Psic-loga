@@ -13,11 +13,12 @@ function App() {
     title: "Psicóloga Clínica",
     crp: "CRP 16ª / 6821",
     phone: "(27) 99579-7867",
+    email: "psipolianamattar@gmail.com",
+    instagram: "@psipolimatt",
     // Links das fotos
     heroPhoto: "https://i.imgur.com/A3QMDFX.png",
     welcomePhoto: "https://i.imgur.com/ydQZNXx.jpeg",
     aboutPhoto: "https://i.imgur.com/ppZ4p4x.png",
-    // NOVA LOGO - imagem específica para a navbar
     logoUrl: "https://i.imgur.com/C3uUjIX.png",
     // Cores da marca
     colors: {
@@ -28,14 +29,12 @@ function App() {
 
   return (
     <>
-      {/* Navbar com fundo #A1A491 e nova logo redonda */}
       <Navbar 
         name={psychologistData.name}
         logoUrl={psychologistData.logoUrl}
       />
       
       <main>
-        {/* Hero Section */}
         <Hero 
           name={psychologistData.name}
           title={psychologistData.title}
@@ -45,30 +44,31 @@ function App() {
           colors={psychologistData.colors}
         />
         
-        {/* Seção de Boas-vindas */}
         <Welcome 
           name={psychologistData.name}
           photoUrl={psychologistData.welcomePhoto}
           colors={psychologistData.colors}
         />
         
-        {/* Seção de Serviços */}
         <Services colors={psychologistData.colors} />
         
-        {/* Seção Sobre Mim */}
         <About 
           name={psychologistData.name}
           photoUrl={psychologistData.aboutPhoto}
           colors={psychologistData.colors}
         />
         
-        {/* Seção Importância da Terapia */}
         <TherapyImportance colors={psychologistData.colors} />
       </main>
       
       <Footer 
         name={psychologistData.name}
         crp={psychologistData.crp}
+        logoUrl={psychologistData.logoUrl}
+        phone={psychologistData.phone}
+        email={psychologistData.email}
+        instagram={psychologistData.instagram}
+        colors={psychologistData.colors}
       />
     </>
   )

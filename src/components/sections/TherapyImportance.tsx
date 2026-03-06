@@ -242,7 +242,7 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
             </div>
             
             <p className="text-white/80 text-sm mt-4">
-              Atendimento online e presencial • Marechal Floriano-ES
+              Atendimento online e presencial
             </p>
           </motion.div>
         </div>
