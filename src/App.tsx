@@ -4,6 +4,7 @@ import Hero from './components/sections/Hero'
 import Welcome from './components/sections/Welcome'
 import Services from './components/sections/Services'
 import About from './components/sections/About'
+import TherapyImportance from './components/sections/TherapyImportance'
 
 function App() {
   // Dados da Psicóloga
@@ -28,7 +29,7 @@ function App() {
       <Navbar name={psychologistData.name} />
       
       <main>
-        {/* Hero Section com frases animadas */}
+        {/* 1️⃣ Hero Section com frases animadas */}
         <Hero 
           name={psychologistData.name}
           title={psychologistData.title}
@@ -38,22 +39,25 @@ function App() {
           colors={psychologistData.colors}
         />
         
-        {/* Seção de Boas-vindas */}
+        {/* 2️⃣ Seção de Boas-vindas */}
         <Welcome 
           name={psychologistData.name}
           photoUrl={psychologistData.welcomePhoto}
           colors={psychologistData.colors}
         />
         
-        {/* Seção de Serviços - AGORA PRIMEIRO */}
+        {/* 3️⃣ Seção de Serviços */}
         <Services colors={psychologistData.colors} />
         
-        {/* Seção Sobre Mim - AGORA DEPOIS DOS SERVIÇOS */}
+        {/* 4️⃣ Seção Sobre Mim */}
         <About 
           name={psychologistData.name}
           photoUrl={psychologistData.aboutPhoto}
           colors={psychologistData.colors}
         />
+        
+        {/* 5️⃣ Seção Importância da Terapia (POR ÚLTIMO) */}
+        <TherapyImportance colors={psychologistData.colors} />
         
         {/* Próximas seções a serem criadas:
             - FAQ (Perguntas Frequentes)
