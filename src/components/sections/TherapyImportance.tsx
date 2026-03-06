@@ -35,7 +35,9 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
   ];
 
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden"
+    <section 
+      id="importance" 
+      className="py-16 md:py-24 overflow-hidden relative"
       style={{ backgroundColor: colors.primary }}
     >
       {/* Elementos decorativos */}

@@ -17,7 +17,7 @@ const Welcome = ({ name, photoUrl, colors }: WelcomeProps) => {
   });
 
   return (
-    <section className="py-20 md:py-28 lg:py-36 overflow-hidden bg-white relative">
+    <section id="welcome" className="py-20 md:py-28 lg:py-36 overflow-hidden bg-white relative">
       {/* Elemento decorativo de fundo */}
       <div className="absolute inset-0 overflow-hidden">
         <div 

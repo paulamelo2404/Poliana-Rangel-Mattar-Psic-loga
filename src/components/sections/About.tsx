@@ -55,7 +55,7 @@ const About = ({ name, photoUrl, colors }: AboutProps) => {
   };
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 overflow-hidden bg-white">
+   <section id="about" className="py-16 md:py-24 lg:py-32 overflow-hidden bg-white">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div ref={ref} className="max-w-6xl mx-auto">
           

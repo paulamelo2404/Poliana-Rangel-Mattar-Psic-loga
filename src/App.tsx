@@ -17,7 +17,9 @@ function App() {
     heroPhoto: "https://i.imgur.com/A3QMDFX.png",
     welcomePhoto: "https://i.imgur.com/ydQZNXx.jpeg",
     aboutPhoto: "https://i.imgur.com/ppZ4p4x.png",
-    // Cores da marca (sem roxo)
+    // NOVA LOGO - imagem específica para a navbar
+    logoUrl: "https://i.imgur.com/C3uUjIX.png",
+    // Cores da marca
     colors: {
       primary: "#A1A491",
       secondary: "#CEBABF"
@@ -26,10 +28,14 @@ function App() {
 
   return (
     <>
-      <Navbar name={psychologistData.name} />
+      {/* Navbar com fundo #A1A491 e nova logo redonda */}
+      <Navbar 
+        name={psychologistData.name}
+        logoUrl={psychologistData.logoUrl}
+      />
       
       <main>
-        {/* 1️⃣ Hero Section com frases animadas */}
+        {/* Hero Section */}
         <Hero 
           name={psychologistData.name}
           title={psychologistData.title}
@@ -39,30 +45,25 @@ function App() {
           colors={psychologistData.colors}
         />
         
-        {/* 2️⃣ Seção de Boas-vindas */}
+        {/* Seção de Boas-vindas */}
         <Welcome 
           name={psychologistData.name}
           photoUrl={psychologistData.welcomePhoto}
           colors={psychologistData.colors}
         />
         
-        {/* 3️⃣ Seção de Serviços */}
+        {/* Seção de Serviços */}
         <Services colors={psychologistData.colors} />
         
-        {/* 4️⃣ Seção Sobre Mim */}
+        {/* Seção Sobre Mim */}
         <About 
           name={psychologistData.name}
           photoUrl={psychologistData.aboutPhoto}
           colors={psychologistData.colors}
         />
         
-        {/* 5️⃣ Seção Importância da Terapia (POR ÚLTIMO) */}
+        {/* Seção Importância da Terapia */}
         <TherapyImportance colors={psychologistData.colors} />
-        
-        {/* Próximas seções a serem criadas:
-            - FAQ (Perguntas Frequentes)
-            - Contato / Localização
-        */}
       </main>
       
       <Footer 

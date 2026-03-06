@@ -70,7 +70,9 @@ const Services = ({ colors }: ServicesProps) => {
   ];
 
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden"
+    <section 
+      id="services" 
+      className="py-16 md:py-24 lg:py-32 relative overflow-hidden"
       style={{ backgroundColor: colors.primary }}
     >
       {/* Elementos decorativos */}
@@ -199,7 +201,7 @@ const Services = ({ colors }: ServicesProps) => {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="text-center text-white text-sm mt-6 opacity-80"
         >
-           Clique e agende sua consulta - Atendimento online e presencial.
+          Clique e agende sua consulta - Atendimento online e presencial.
         </motion.p>
       </div>
     </section>
