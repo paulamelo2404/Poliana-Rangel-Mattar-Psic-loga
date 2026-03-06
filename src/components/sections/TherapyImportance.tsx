@@ -97,10 +97,10 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
             
-            {/* Card com verde mais escuro */}
+            {/* Card com verde #47493A */}
             <div 
               className="p-8 rounded-3xl text-white"
-              style={{ backgroundColor: '#1B4D3E' }}
+              style={{ backgroundColor: '#47493A' }}
             >
               <h3 className="text-2xl font-black mb-4">Um lugar seguro para ser você</h3>
               <p className="text-white/90 leading-relaxed mb-4">
@@ -179,10 +179,10 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
             </div>
             
             <div className="lg:col-span-2">
-              {/* Card com verde mais escuro */}
+              {/* Card com verde #47493A */}
               <div 
                 className="p-8 rounded-3xl text-white"
-                style={{ backgroundColor: '#1B4D3E' }}
+                style={{ backgroundColor: '#47493A' }}
               >
                 <p className="text-xl leading-relaxed font-light">
                   "A terapia não é para quem está fraco. É para quem quer se fortalecer. 
@@ -190,8 +190,13 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
                   É para quem sabe que, às vezes, a gente precisa de alguém do lado para enxergar 
                   caminhos que sozinho não consegue ver."
                 </p>
-                <div className="flex items-center gap-3 mt-6">
-                  <div className="w-10 h-10 rounded-full bg-white/20" />
+                <div className="flex items-center gap-4 mt-6">
+                  {/* Foto da Poliana pequenininha */}
+                  <img 
+                    src="https://i.imgur.com/C3uUjIX.png" 
+                    alt="Poliana Rangel Mattar"
+                    className="w-12 h-12 rounded-full object-cover border-2 border-white"
+                  />
                   <div>
                     <p className="font-bold">Poliana Rangel Mattar</p>
                     <p className="text-sm text-white/70">Psicóloga • CRP 16/6B21</p>
