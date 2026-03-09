@@ -2,15 +2,15 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 interface AboutProps {
-  name: string;
   photoUrl: string;
   colors: {
     primary: string;
     secondary: string;
+     accent: string;
   };
 }
 
-const About = ({ name, photoUrl, colors }: AboutProps) => {
+const About = ({ photoUrl, colors }: AboutProps) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,

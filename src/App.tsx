@@ -23,7 +23,8 @@ function App() {
     // Cores da marca
     colors: {
       primary: "#A1A491",
-      secondary: "#CEBABF"
+      secondary: "#CEBABF",
+      accent: "#A1A491"
     }
   };
 
