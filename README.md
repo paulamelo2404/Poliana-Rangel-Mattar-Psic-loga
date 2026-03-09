@@ -8,7 +8,7 @@
 
 Site institucional moderno e responsivo desenvolvido para a psicóloga **Dra. Poliana Rangel Mattar**. O projeto apresenta seus serviços, formação acadêmica, experiências internacionais e canal de contato direto via WhatsApp.
 
-🔗 **Acesse o site:** [dra-polianamattar.vercel.app](https://dra-polianamattar.vercel.app) *(substitua pelo seu URL real)*
+🔗 **Acesse o site:** [dra-polianamattar.vercel.app](https://poliana-rangel-mattar-psic-loga.vercel.app/) 
 
 ---
 
