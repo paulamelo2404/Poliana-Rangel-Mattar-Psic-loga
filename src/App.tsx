@@ -54,7 +54,6 @@ function App() {
         <Services colors={psychologistData.colors} />
         
         <About 
-          name={psychologistData.name}
           photoUrl={psychologistData.aboutPhoto}
           colors={psychologistData.colors}
         />
