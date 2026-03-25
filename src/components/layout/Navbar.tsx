@@ -25,6 +25,7 @@ const Navbar = ({ name, logoUrl }: NavbarProps) => {
     { label: 'Boas-vindas', href: '#welcome' },
     { label: 'Serviços', href: '#services' },
     { label: 'Sobre', href: '#about' },
+    { label: 'Cartilhas', href: '#resources' },
     { label: 'Importância', href: '#importance' },
     
   ];

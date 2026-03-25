@@ -5,6 +5,7 @@ import Welcome from './components/sections/Welcome'
 import Services from './components/sections/Services'
 import About from './components/sections/About'
 import TherapyImportance from './components/sections/TherapyImportance'
+import Resources from './components/sections/Resources' // NOVA IMPORTAÇÃO
 
 function App() {
   // Dados da Psicóloga
@@ -59,6 +60,9 @@ function App() {
         />
         
         <TherapyImportance colors={psychologistData.colors} />
+        
+        {/* NOVA SEÇÃO: CARTILHAS */}
+        <Resources colors={psychologistData.colors} />
       </main>
       
       <Footer 
