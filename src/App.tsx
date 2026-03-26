@@ -17,7 +17,7 @@ function App() {
     email: "psipolianamattar@gmail.com",
     instagram: "@psipolimatt",
     // Links das fotos
-    heroPhoto: "https://i.imgur.com/A3QMDFX.png",
+    heroPhoto: "https://i.imgur.com/EAFpnZg.png",
     welcomePhoto: "https://i.imgur.com/lyva6EF.jpeg",
     aboutPhoto: "https://i.imgur.com/JuT40eC.png"
 ,
