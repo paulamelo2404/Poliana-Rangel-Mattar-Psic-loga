@@ -25,11 +25,11 @@ const Services = ({ colors }: ServicesProps) => {
     {
       id: 1,
       title: "Psicoterapia para Adultos",
-      description: "Acolhimento para ansiedade, estresse e sobrecarga emocional com abordagem em TCC."
+      description: "Abordagem pela Terapia Cognitivo Comportamental - TCC."
     },
     {
       id: 2,
-      title: "Avaliação Psicológica e Neuropsicológica",
+      title: "Avaliação Psicopedagógica e Neuropsicológica",
       description: "Avaliação completa com laudo técnico detalhado e orientações personalizadas."
     },
     {
@@ -55,7 +55,7 @@ const Services = ({ colors }: ServicesProps) => {
     {
       id: 7,
       title: "Avaliações Específicas",
-      description: "Pré-bariátrica, laqueadura e vasectomia conforme protocolos médicos."
+      description: "Pré-bariátrica, laqueadura e vasectomia  conforme diretrizes do Conselho Federal de Psicologia."
     },
     {
       id: 8,
@@ -65,7 +65,7 @@ const Services = ({ colors }: ServicesProps) => {
     {
       id: 9,
       title: "Atendimento para Brasileiras no Exterior",
-      description: "Apoio emocional online para adaptação cultural, saudade e sobrecarga na maternidade."
+      description: "Apoio emocional online para adaptação cultural, saudade não da para  resolver?"
     }
   ];
 
@@ -103,7 +103,7 @@ const Services = ({ colors }: ServicesProps) => {
           <h2 
             className="text-4xl md:text-5xl font-black mb-4 text-white"
           >
-            Como posso ajudar
+            Pra quem é esse atendimento?
           </h2>
           <p className="text-white text-lg opacity-90">
             Cuidado psicológico com técnica, sensibilidade e um olhar que enxerga você por completo.
@@ -137,7 +137,8 @@ const Services = ({ colors }: ServicesProps) => {
               {/* Número decorativo */}
               <div className="flex items-start justify-between mb-4">
                 <span 
-                  className="text-sm font-black opacity-20 text-5xl leading-none"
+                  className="font-black opacity-20 text-5xl leading-none"
+                  
                   style={{ color: colors.primary }}
                 >
                   {String(index + 1).padStart(2, '0')}

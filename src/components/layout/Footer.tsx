@@ -30,13 +30,14 @@ const Footer = ({
   const instagramUrl = `https://instagram.com/${instagram.replace('@', '')}`;
   const emailUrl = `mailto:${email}`;
 
-  // Menu rápido
+  // Menu rápido - ADICIONADO CARTILHAS
   const quickLinks = [
     { label: 'Início', href: '#inicio' },
     { label: 'Boas-vindas', href: '#welcome' },
     { label: 'Serviços', href: '#services' },
     { label: 'Sobre', href: '#about' },
     { label: 'Importância', href: '#importance' },
+    { label: 'Cartilhas', href: '#resources' }, // NOVO
   ];
 
   // Serviços resumidos
@@ -112,7 +113,7 @@ const Footer = ({
                   <span className="text-xs text-white/80">CRP Ativo</span>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
-                  <span className="text-xs text-white/80">11+ anos</span>
+                  <span className="text-xs text-white/80">Vasta Experiência</span>
                 </div>
               </div>
             </motion.div>

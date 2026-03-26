@@ -198,14 +198,14 @@ const Resources = ({ colors }: ResourcesProps) => {
               style={{ background: colors.secondary }}
             />
             <p className="text-xl md:text-2xl italic font-light text-gray-700 max-w-2xl mx-auto relative z-10">
-              "Você é o autor da sua própria história. Transforme a sua vida cuidando da sua saúde mental."
+              "A  arte não reproduz o invisível, em vez disso, torna visível"
             </p>
             <div 
               className="absolute -right-4 -bottom-4 w-8 h-8 rounded-full opacity-30"
               style={{ background: colors.primary }}
             />
           </div>
-          <p className="text-gray-500 text-sm mt-4">— Poliana Rangel Mattar</p>
+          <p className="text-gray-500 text-sm mt-4">— Paul Klee</p>
         </motion.div>
       </div>
     </section>

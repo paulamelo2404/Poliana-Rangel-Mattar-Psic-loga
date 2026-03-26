@@ -186,13 +186,18 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
                 className="p-8 rounded-3xl text-white"
                 style={{ backgroundColor: '#47493A' }}
               >
-                <p className="text-xl leading-relaxed font-light">
-                  "A terapia não é para quem está fraco. É para quem quer se fortalecer. 
-                  É para quem entende que cuidar da mente é tão importante quanto cuidar do corpo. 
-                  É para quem sabe que, às vezes, a gente precisa de alguém do lado para enxergar 
-                  caminhos que sozinho não consegue ver."
-                </p>
-                <div className="flex items-center gap-4 mt-6">
+                <div className="text-xl leading-relaxed font-light italic whitespace-pre-line">
+                  "O universo inteiro se encontra em evolução.
+                  Ele se expande, estrelas explodem,
+                  Mundos surgem, mundos morrem.
+                  Nada fica parado, tudo é fluir e transformar.
+                  Também eu sou uma parte desse desenvolvimento.
+                  Eu não quero me abster dessa expansão,
+                  Do amadurecer e do crescer.
+                  Eu quero me tornar sábio no coração da vida."
+                </div>
+                <p className="text-right font-medium mt-4 text-white/90">— Ulrich Schaffer</p>
+                <div className="flex items-center gap-4 mt-6 pt-6 border-t border-white/10">
                   {/* Foto da Poliana pequenininha */}
                   <img 
                     src="https://i.imgur.com/ivYEb1V.png" 
