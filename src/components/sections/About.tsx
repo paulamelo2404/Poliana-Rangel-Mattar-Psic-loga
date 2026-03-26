@@ -41,8 +41,7 @@ const About = ({ photoUrl, colors }: AboutProps) => {
     "Psicomotricidade",
     "Método Denver (Prevenção Precoce)", 
     "Avaliação Psicológica",
-    "Orientação Parental", 
-    "Orientação Vocacional"
+  
   ];
 
   return (
