@@ -11,7 +11,7 @@ function App() {
   // Dados da Psicóloga
   const psychologistData = {
     name: "Poliana Rangel Mattar",
-    title: "Psicóloga Clínica",
+    title: "Psicóloga, Neuropsicóloga, Neuropsicopedagoga e Práticas Integrativas",
     crp: "CRP 16ª/6821",
     phone: "(27) 99579-7867",
     email: "psipolianamattar@gmail.com",
@@ -20,7 +20,7 @@ function App() {
     heroPhoto: "https://i.imgur.com/A3QMDFX.png",
     welcomePhoto: "https://i.imgur.com/lyva6EF.jpeg",
     aboutPhoto: "https://i.imgur.com/ppZ4p4x.png",
-    logoUrl: "https://i.imgur.com/C3uUjIX.png",
+    logoUrl: "https://i.imgur.com/ivYEb1V.png",
     // Cores da marca
     colors: {
       primary: "#A1A491",

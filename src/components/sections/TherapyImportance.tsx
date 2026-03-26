@@ -173,7 +173,7 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
                   style={{ backgroundColor: colors.secondary }}
                 />
                 <img 
-                  src="https://i.imgur.com/C3uUjIX.png" 
+                  src="https://i.imgur.com/ivYEb1V.png" 
                   alt="Logo Poliana Rangel Mattar"
                   className="relative w-48 h-48 rounded-full object-cover border-4 border-white shadow-2xl"
                 />
@@ -195,7 +195,7 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
                 <div className="flex items-center gap-4 mt-6">
                   {/* Foto da Poliana pequenininha */}
                   <img 
-                    src="https://i.imgur.com/C3uUjIX.png" 
+                    src="https://i.imgur.com/ivYEb1V.png" 
                     alt="Poliana Rangel Mattar"
                     className="w-12 h-12 rounded-full object-cover border-2 border-white"
                   />
