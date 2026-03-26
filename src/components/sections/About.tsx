@@ -6,7 +6,7 @@ interface AboutProps {
   colors: {
     primary: string;
     secondary: string;
-     accent: string;
+    accent: string;
   };
 }
 
@@ -16,229 +16,199 @@ const About = ({ photoUrl, colors }: AboutProps) => {
     threshold: 0.1,
   });
 
-  // Dados da seção sobre
-  const aboutData = {
-    fullName: "Poliana Rangel Mattar",
-    titles: "Psicóloga • Mestre em Segurança Pública • Artista Plástica",
-    crp: "CRP 16ª/6821",
-    quote: "Minha escuta não é apenas clínica. Ela é humana, técnica e sensível.",
-    
-    formacao: [
-      { area: "Psicologia", tipo: "Graduação" },
-      { area: "Licenciatura em Desenho e Plástica", tipo: "Graduação" },
-      { area: "Ciências Contábeis", tipo: "Graduação" },
-      { area: "Segurança Pública com foco em Direitos Humanos", tipo: "Mestrado" }
-    ],
-    
-    especializacoes: [
-      "Neuropsicologia", "Psicopedagogia", "Neuropsicopedagogia",
-      "Terapia Cognitivo-Comportamental (TCC)", "Arteterapia", "Psicomotricidade",
-      "Método Denver (Prevenção Precoce do Autismo)", "Avaliação Psicológica",
-      "Orientação Parental", "Orientação Vocacional", "Avaliação para Bariátrica",
-      "Avaliação para Laqueadura e Vasectomia"
-    ],
-    
-    atuacoes: [
-      "Saúde - CAPSIJ (atendimento infantil e adolescente)",
-      "Saúde Mental - Clínica particular (psicoterapia e avaliações)",
-      "Assistência Social - CREAS e CRAS",
-      "Educação - Rede municipal de educação (3 anos)",
-      "Instituições - APAE (atendimento a neurodivergentes)",
-      "Internacional - Alemanha (4 anos vivendo e atuando)"
-    ],
-    
-    contato: {
-      whatsapp: "(27) 99579-7867",
-      email: "psipolianamattar@gmail.com",
-      instagram: "@psipolimatt"
-    }
+  // Dados de formação
+  const formacaoData = {
+    graduacoes: ["Psicologia", "Licenciatura em Desenho e Plástica", "Ciências Contábeis"],
+    mestrado: ["Segurança Pública com foco em Direitos Humanos"]
   };
 
-  return (
-   <section id="about" className="py-16 md:py-24 lg:py-32 overflow-hidden bg-white">
-      <div className="container px-4 sm:px-6 lg:px-8">
-        <div ref={ref} className="max-w-6xl mx-auto">
-          
-          {/* Cabeçalho da seção */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <span 
-              className="text-sm font-medium tracking-wider uppercase inline-block mb-3"
-              style={{ color: colors.secondary }}
-            >
-              Conheça minha história
-            </span>
-            <h2 
-              className="text-3xl sm:text-4xl md:text-5xl font-bold"
-              style={{ color: colors.primary }}
-            >
-              Sobre Mim
-            </h2>
-          </motion.div>
+  // Onde já atuei (removido Internacional)
+  const atuacoes = [
+    "Saúde - CAPSIJ (atendimento infantil e adolescente)",
+    "Saúde Mental - Clínica particular (psicoterapia e avaliações)",
+    "Assistência Social - CREAS e CRAS",
+    "Educação - Rede municipal de educação (3 anos)",
+    "Instituições - APAE (atendimento a neurodivergentes)"
+  ];
 
-          {/* Grid principal: Foto + Introdução */}
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 mb-16">
+  // Especializações
+  const especializacoes = [
+    "Neuropsicologia", 
+    "Psicopedagogia", 
+    "Neuropsicopedagogia",
+    "Terapia Cognitivo-Comportamental (TCC)", 
+    "Arteterapia", 
+    "Psicomotricidade",
+    "Método Denver (Prevenção Precoce)", 
+    "Avaliação Psicológica",
+    "Orientação Parental", 
+    "Orientação Vocacional"
+  ];
+
+  return (
+    <section id="about" className="py-20 md:py-32 overflow-hidden bg-white relative">
+      <div className="container px-4 sm:px-6 lg:px-8 relative z-10">
+        <div ref={ref} className="max-w-7xl mx-auto">
+          
+          <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-center mb-24">
             
-            {/* Coluna da Foto - Esquerda (tamanho médio) - SEM MOLDE ORGÂNICO ADICIONAL */}
+            {/* Coluna da Foto - sem sombreado */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-4 flex justify-center lg:justify-start"
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="lg:col-span-5 flex flex-col items-center lg:items-start"
             >
-              <div className="relative w-64 md:w-72 lg:w-80">
-                {/* Elementos decorativos de fundo - APENAS ATRÁS */}
-                <div 
-                  className="absolute -top-4 -left-4 w-32 h-32 rounded-full opacity-20 blur-2xl"
-                  style={{ background: colors.secondary }}
-                />
-                <div 
-                  className="absolute -bottom-4 -right-4 w-40 h-40 rounded-full opacity-20 blur-2xl"
-                  style={{ background: colors.primary }}
-                />
-                
-                {/* Foto - SEM MOLDE, pois o PNG já tem */}
-                <div className="relative z-10">
+              <div className="relative w-72 md:w-80 lg:w-full max-w-md mx-auto">
+                <div className="relative z-10 rounded-3xl overflow-hidden">
                   <img 
                     src={photoUrl}
-                    alt={aboutData.fullName}
-                    className="w-full h-auto relative z-10"
+                    alt="Dra. Poliana Rangel Mattar"
+                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                   />
-                  
-                  {/* Apenas um sombreado suave, sem borda orgânica adicional */}
-                  <div className="absolute inset-0 shadow-inner pointer-events-none" />
+                </div>
+                
+                <div className="absolute -bottom-8 left-0 w-full text-center lg:text-left text-[10px] text-gray-400 font-medium tracking-widest uppercase">
+                  Foto: Chris Gama | Mira Creatives
                 </div>
               </div>
             </motion.div>
 
-            {/* Coluna da Introdução - Direita */}
+            {/* Coluna da Introdução */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="lg:col-span-8 flex flex-col justify-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="lg:col-span-7 flex flex-col justify-center"
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: colors.primary }}>
-                {aboutData.fullName}
-              </h3>
-              <p className="text-lg text-gray-600 mb-2">{aboutData.titles}</p>
-              <p className="text-sm text-gray-500 mb-6">{aboutData.crp}</p>
-              
-              {/* Frase de destaque */}
-              <div className="relative mb-8">
-                <div className="absolute -left-2 -top-2 text-4xl opacity-20" style={{ color: colors.secondary }}>"</div>
-                <p className="text-xl md:text-2xl italic font-light pl-6" style={{ color: colors.primary }}>
-                  {aboutData.quote}
-                </p>
+              <div className="inline-flex items-center gap-2 mb-4">
+                <div className="w-8 h-px" style={{ backgroundColor: colors.secondary }} />
+                <span className="text-sm font-bold tracking-widest uppercase" style={{ color: colors.secondary }}>
+                  SOBRE MIM
+                </span>
               </div>
               
-              <p className="text-gray-700 leading-relaxed">
-                <span className="font-semibold" style={{ color: colors.secondary }}>A arte e a ciência no cuidado com o outro.</span>{" "}
-                Sou psicóloga e artista plástica de formação, e construo minha trajetória no entrelaçamento entre ciência, artes, saúde mental e direitos humanos. Acredito em um cuidado que acolhe o sujeito em sua totalidade — onde cognição, emoção, corpo, história e contexto social se entrecruzam como dimensões vivas da existência.
-              </p>
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-gray-900">
+                Poliana Rangel Mattar
+              </h2>
+              
+             <div className="mb-8">
+  <p className="text-lg font-medium" style={{ color: colors.primary }}>
+    Psicóloga • Neuropsicóloga • Neuropsicopedagoga • Práticas Integrativas
+  </p>
+  <p 
+    className="text-sm font-medium mt-2 px-3 py-1 rounded-full inline-block w-fit"
+    style={{ 
+      background: `${colors.primary}10`,
+      color: colors.primary,
+      border: `1px solid ${colors.secondary}30`
+    }}
+  >
+    CRP 16ª/6821
+  </p>
+</div>
+              
+              <div className="space-y-5 text-gray-600 leading-relaxed text-lg">
+                <p className="text-gray-800 font-medium text-justify">
+                  Acredito na importância de um espaço de escuta acolhedor, respeitoso e livre de julgamentos, onde cada pessoa possa entrar em contato com suas emoções e encontrar caminhos para lidar com os desafios da vida.
+                </p>
+                <p className="text-justify">
+                  Meu trabalho é voltado para o cuidado com a saúde emocional, buscando oferecer um acompanhamento que respeite a singularidade de cada pessoa, seu tempo, suas vivências e seu processo.
+                </p>
+                <p className="text-justify">
+                  A psicoterapia é um espaço de construção, autoconhecimento e transformação. Ao longo do processo terapêutico, é possível compreender melhor sentimentos, pensamentos e padrões que fazem parte da própria história, favorecendo o desenvolvimento de novos recursos internos e formas mais saudáveis de se relacionar consigo mesmo e com o mundo.
+                </p>
+              </div>
             </motion.div>
           </div>
 
-          {/* Experiência Internacional em destaque - SEM EMOJI */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-16 p-8 rounded-2xl"
-            style={{ background: `linear-gradient(135deg, ${colors.primary}10 0%, ${colors.secondary}10 100%)` }}
-          >
-            <div className="flex items-start gap-4">
-              <div className="w-8 h-8 flex items-center justify-center rounded-full" style={{ background: colors.primary, color: 'white', fontSize: '18px' }}>🌍</div>
-              <div>
-                <h4 className="text-xl font-bold mb-2" style={{ color: colors.primary }}>Vivência Internacional</h4>
-                <p className="text-gray-700">
-                  <span className="font-semibold" style={{ color: colors.secondary }}>4 anos na Alemanha</span> - Vivi a maternidade longe da família e da minha rede de apoio. Conheço na prática os desafios de viver fora do país e o quanto essa fase pode ser emocionalmente exigente.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
           {/* Grid de Formação e Atuação */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid lg:grid-cols-2 gap-8 mb-20">
             
-            {/* Formação Acadêmica - SEM EMOJI */}
+            {/* Card: Formação Acadêmica */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/40 relative overflow-hidden"
+            >
+              <div className="absolute top-0 left-0 w-full h-1" style={{ backgroundColor: colors.primary }} />
+              <h4 className="text-2xl font-bold mb-8 text-gray-900">
+                Formação Acadêmica
+              </h4>
+              
+              <div className="space-y-8">
+                <div>
+                  <h5 className="text-sm font-bold tracking-widest uppercase text-gray-400 mb-4">Graduações</h5>
+                  <ul className="space-y-3">
+                    {formacaoData.graduacoes.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 group">
+                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full transition-transform group-hover:scale-150" style={{ backgroundColor: colors.secondary }} />
+                        <span className="text-gray-700 font-medium">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div>
+                  <h5 className="text-sm font-bold tracking-widest uppercase text-gray-400 mb-4">Mestrado</h5>
+                  <ul className="space-y-3">
+                    {formacaoData.mestrado.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 group">
+                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full transition-transform group-hover:scale-150" style={{ backgroundColor: colors.secondary }} />
+                        <span className="text-gray-700 font-medium">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Card: Onde já atuei */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-gray-50 p-6 rounded-xl"
+              className="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/40 relative overflow-hidden"
             >
-              <h4 className="text-xl font-bold mb-6 flex items-center gap-2" style={{ color: colors.primary }}>
-                Formação Acadêmica
-              </h4>
-              
-              <div className="space-y-4">
-                <div>
-                  <h5 className="font-semibold text-gray-800 mb-2">Graduações</h5>
-                  <ul className="space-y-2">
-                    {aboutData.formacao.filter(f => f.tipo === "Graduação").map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-sm mt-1" style={{ color: colors.secondary }}>●</span>
-                        <span className="text-gray-700">{item.area}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div>
-                  <h5 className="font-semibold text-gray-800 mb-2">Mestrado</h5>
-                  <ul className="space-y-2">
-                    {aboutData.formacao.filter(f => f.tipo === "Mestrado").map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-sm mt-1" style={{ color: colors.secondary }}>●</span>
-                        <span className="text-gray-700">{item.area}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Onde já atuei - SEM EMOJI */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="bg-gray-50 p-6 rounded-xl"
-            >
-              <h4 className="text-xl font-bold mb-6 flex items-center gap-2" style={{ color: colors.primary }}>
+              <div className="absolute top-0 left-0 w-full h-1" style={{ backgroundColor: colors.secondary }} />
+              <h4 className="text-2xl font-bold mb-8 text-gray-900">
                 Onde já atuei
               </h4>
-              <ul className="space-y-3">
-                {aboutData.atuacoes.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="text-lg" style={{ color: colors.secondary }}>•</span>
-                    <span className="text-gray-700">{item}</span>
+              <ul className="space-y-5">
+                {atuacoes.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors">
+                    <div className="shrink-0 mt-1 w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: `${colors.primary}15` }}>
+                      <svg className="w-3.5 h-3.5" style={{ color: colors.primary }} fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-700 leading-relaxed text-justify">{item}</span>
                   </li>
                 ))}
               </ul>
             </motion.div>
           </div>
 
-          {/* Especializações - SEM EMOJI */}
+          {/* Especializações (Estilo Moderno com Alto Contraste) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="mb-16"
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-center"
           >
-            <h4 className="text-xl font-bold mb-6 flex items-center gap-2" style={{ color: colors.primary }}>
-              Especializações
+            <h4 className="text-sm font-bold tracking-widest uppercase text-gray-400 mb-10">
+              Áreas de Especialização
             </h4>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-              {aboutData.especializacoes.map((item, idx) => (
+            <div className="flex flex-wrap justify-center gap-4 md:gap-5 max-w-5xl mx-auto">
+              {especializacoes.map((item, idx) => (
                 <div 
                   key={idx}
-                  className="bg-gray-50 px-4 py-2 rounded-lg text-gray-700 text-sm hover:shadow-md transition-shadow"
+                  className="px-6 py-3.5 rounded-2xl text-base font-extrabold shadow-md transition-all hover:scale-105"
+                  style={{ 
+                    color: '#FFFFFF',
+                    backgroundColor: colors.primary,
+                  }}
                 >
                   {item}
                 </div>
@@ -246,89 +216,6 @@ const About = ({ photoUrl, colors }: AboutProps) => {
             </div>
           </motion.div>
 
-          {/* Avaliações - SEM EMOJI */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mb-16 p-8 rounded-2xl border"
-            style={{ borderColor: `${colors.primary}30` }}
-          >
-            <h4 className="text-xl font-bold mb-4 flex items-center gap-2" style={{ color: colors.primary }}>
-              Avaliações que realizo
-            </h4>
-            <p className="text-gray-700 mb-4">
-              Realizo avaliações neuropsicológicas com elaboração de laudos técnicos completos, estruturados com:
-            </p>
-            <ul className="grid sm:grid-cols-2 gap-2 mb-6">
-              {[
-                "Descrição detalhada dos instrumentos utilizados",
-                "Interpretação individualizada de cada teste e subteste",
-                "Integração clínica entre os resultados",
-                "Análise qualitativa e quantitativa",
-                "Construção de hipótese diagnóstica fundamentada",
-                "Orientações específicas para família",
-                "Relatório direcionado à escola"
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <span className="text-green-500">✓</span>
-                  <span className="text-gray-600 text-sm">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="text-gray-700 italic text-sm">
-              "Prezo por uma escrita técnica, porém acessível, que favoreça a compreensão por parte da família e da equipe escolar, sem abrir mão do rigor científico."
-            </p>
-          </motion.div>
-
-          {/* Contato e Frase Final - SEM EMOJI */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.9 }}
-            className="text-center"
-          >
-            <h4 className="text-xl font-bold mb-6" style={{ color: colors.primary }}>
-              Onde me encontrar
-            </h4>
-            
-            <div className="flex flex-wrap justify-center gap-6 mb-8">
-              <a 
-                href={`https://wa.me/${aboutData.contato.whatsapp.replace(/\D/g, '')}`}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
-              >
-                <span className="text-green-500 text-xl">📱</span>
-                <span className="text-gray-700">{aboutData.contato.whatsapp}</span>
-              </a>
-              
-              <a 
-                href={`mailto:${aboutData.contato.email}`}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
-              >
-                <span className="text-xl">📧</span>
-                <span className="text-gray-700">{aboutData.contato.email}</span>
-              </a>
-              
-              <a 
-                href={`https://instagram.com/${aboutData.contato.instagram.replace('@', '')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
-              >
-                <span className="text-xl">📷</span>
-                <span className="text-gray-700">{aboutData.contato.instagram}</span>
-              </a>
-            </div>
-
-            <div className="max-w-2xl mx-auto">
-              <p className="text-xl italic mb-4" style={{ color: colors.primary }}>
-                "Você não precisa passar por isso sozinha. Seja no Brasil ou no exterior, estou aqui para te acolher."
-              </p>
-              <p className="text-gray-600">
-                Atendimento com olhar integral
-              </p>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

@@ -19,7 +19,8 @@ function App() {
     // Links das fotos
     heroPhoto: "https://i.imgur.com/A3QMDFX.png",
     welcomePhoto: "https://i.imgur.com/lyva6EF.jpeg",
-    aboutPhoto: "https://i.imgur.com/ppZ4p4x.png",
+    aboutPhoto: "https://i.imgur.com/JuT40eC.png"
+,
     logoUrl: "https://i.imgur.com/ivYEb1V.png",
     // Cores da marca
     colors: {
