@@ -20,7 +20,7 @@ const About = ({ photoUrl, colors }: AboutProps) => {
   const aboutData = {
     fullName: "Poliana Rangel Mattar",
     titles: "Psicóloga • Mestre em Segurança Pública • Artista Plástica",
-    crp: "CRP 16/6B21",
+    crp: "CRP 16ª/6821",
     quote: "Minha escuta não é apenas clínica. Ela é humana, técnica e sensível.",
     
     formacao: [

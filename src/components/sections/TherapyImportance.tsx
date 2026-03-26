@@ -96,7 +96,7 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
               >
                 <source src="https://i.imgur.com/aWJjtfM.mp4" type="video/mp4" />
               </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
             </div>
             
             {/* Card com verde #47493A */}
@@ -151,7 +151,7 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
                   alt="Terapeuta acolhendo paciente com guarda-chuva"
                   className="w-full h-auto object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
               </div>
               <p className="text-white/80 text-sm mt-3 text-center italic">
                 "Na terapia, você encontra acolhimento para enfrentar qualquer tempestade"
@@ -201,7 +201,7 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
                   />
                   <div>
                     <p className="font-bold">Poliana Rangel Mattar</p>
-                    <p className="text-sm text-white/70">Psicóloga • CRP 16/6B21</p>
+                    <p className="text-sm text-white/70">Psicóloga • CRP 16ª/6821</p>
                   </div>
                 </div>
               </div>

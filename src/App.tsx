@@ -10,15 +10,15 @@ import Resources from './components/sections/Resources' // NOVA IMPORTAÇÃO
 function App() {
   // Dados da Psicóloga
   const psychologistData = {
-    name: "Poliana Mattar",
+    name: "Poliana Rangel Mattar",
     title: "Psicóloga Clínica",
-    crp: "CRP 16ª / 6821",
+    crp: "CRP 16ª/6821",
     phone: "(27) 99579-7867",
     email: "psipolianamattar@gmail.com",
     instagram: "@psipolimatt",
     // Links das fotos
     heroPhoto: "https://i.imgur.com/A3QMDFX.png",
-    welcomePhoto: "https://i.imgur.com/ydQZNXx.jpeg",
+    welcomePhoto: "https://i.imgur.com/lyva6EF.jpeg",
     aboutPhoto: "https://i.imgur.com/ppZ4p4x.png",
     logoUrl: "https://i.imgur.com/C3uUjIX.png",
     // Cores da marca
