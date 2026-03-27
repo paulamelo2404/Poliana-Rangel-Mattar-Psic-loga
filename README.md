@@ -1,3 +1,4 @@
+```markdown
 # 🧠 Site Profissional - Dra. Poliana Rangel Mattar | Psicóloga
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -6,11 +7,9 @@
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
-Site institucional moderno e responsivo desenvolvido para a psicóloga **Dra. Poliana Rangel Mattar**. O projeto apresenta seus serviços, formação acadêmica, experiências internacionais e canal de contato direto via WhatsApp.
+Site institucional moderno e responsivo desenvolvido para a psicóloga **Dra. Poliana Rangel Mattar**. O projeto apresenta seus serviços, formação acadêmica, práticas integrativas, materiais gratuitos e canal de contato direto via WhatsApp.
 
-🔗 **Acesse o site:** [dra-polianamattar.vercel.app](https://poliana-rangel-mattar-psic-loga.vercel.app/) 
-
----
+🔗 **Acesse o site:** [dra-polianamattar.vercel.app](https://dra-polianamattar.vercel.app)
 
 ## 📋 Índice
 
@@ -19,16 +18,15 @@ Site institucional moderno e responsivo desenvolvido para a psicóloga **Dra. Po
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Paleta de Cores](#paleta-de-cores)
+- [Seções do Site](#seções-do-site)
 - [Como Executar](#como-executar)
 - [Deploy na Vercel](#deploy-na-vercel)
 - [Contribuição](#contribuição)
 - [Contato](#contato)
 
----
-
 ## 🎯 Sobre o Projeto
 
-Este site foi desenvolvido com o objetivo de criar uma presença online profissional para a Dra. Poliana, psicóloga com mais de 11 anos de experiência, atendimento no Brasil e no exterior. O projeto prioriza:
+Este site foi desenvolvido com o objetivo de criar uma presença online profissional para a Dra. Poliana, psicóloga com vasta experiência em psicoterapia, avaliações psicológicas e práticas integrativas. O projeto prioriza:
 
 - **Experiência do usuário** fluida e acolhedora
 - **Design responsivo** funcionando perfeitamente em mobile, tablet e desktop
@@ -36,67 +34,63 @@ Este site foi desenvolvido com o objetivo de criar uma presença online profissi
 - **Acessibilidade** e boas práticas de SEO
 - **Canal direto** para contato via WhatsApp
 
----
-
 ## ✨ Funcionalidades
 
 - ✅ **Navbar fixa** com logo redonda e menu responsivo
 - ✅ **Hero section** com frases animadas sobre saúde mental (rotativo automático)
 - ✅ **Seção de boas-vindas** com texto acolhedor e foto profissional
 - ✅ **Serviços** em cards com descrições completas (9 especialidades)
-- ✅ **Sobre mim** completo com formação, especializações, experiências e contatos
+- ✅ **Avaliações Especializadas** com checklist detalhado
+- ✅ **Sobre mim** completo com formação, especializações e experiências
+- ✅ **Práticas Integrativas** com Florais de Bach e Terapia Artística Antroposófica
 - ✅ **Importância da terapia** seção de conscientização
+- ✅ **Materiais gratuitos** com cartilhas e publicações para download
 - ✅ **Footer** com links rápidos, serviços resumidos e contatos
 - ✅ **Botão flutuante do WhatsApp** (em todas as páginas)
 - ✅ **Scroll suave** para navegação por âncoras
 - ✅ **100% responsivo** - se adapta a todos os tamanhos de tela
 
----
-
 ## 🚀 Tecnologias Utilizadas
 
 | Tecnologia | Descrição |
 |------------|-----------|
-| [React](https://reactjs.org/) | Biblioteca para construção da interface |
-| [TypeScript](https://www.typescriptlang.org/) | Tipagem estática para maior robustez |
-| [Tailwind CSS](https://tailwindcss.com/) | Framework CSS utilitário para estilização |
-| [Vite](https://vitejs.dev/) | Build tool rápida para desenvolvimento |
-| [Framer Motion](https://www.framer.com/motion/) | Animações suaves e profissionais |
-| [React Intersection Observer](https://github.com/thebuilder/react-intersection-observer) | Detecta elementos na viewport para animações |
-| [Lucide React](https://lucide.netlify.app/) | Ícones leves e personalizáveis |
-| [Vercel](https://vercel.com/) | Hospedagem e deploy contínuo |
-
----
+| **React** | Biblioteca para construção da interface |
+| **TypeScript** | Tipagem estática para maior robustez |
+| **Tailwind CSS v4** | Framework CSS utilitário para estilização |
+| **Vite** | Build tool rápida para desenvolvimento |
+| **Framer Motion** | Animações suaves e profissionais |
+| **React Intersection Observer** | Detecta elementos na viewport para animações |
+| **Lucide React** | Ícones leves e personalizáveis |
+| **Vercel** | Hospedagem e deploy contínuo |
 
 ## 📁 Estrutura do Projeto
 
-```
+```´´
 site-psicologa/
-├── public/                  # Arquivos públicos (favicon, imagens estáticas)
+├── public/
+│   ├── favicon.ico
+│   └── index.html
 ├── src/
 │   ├── components/
-│   │   ├── layout/          # Componentes de estrutura
-│   │   │   ├── Navbar.tsx   # Barra de navegação fixa
-│   │   │   └── Footer.tsx   # Rodapé completo
-│   │   ├── sections/        # Seções da página
-│   │   │   ├── Hero.tsx     # Seção inicial com frases animadas
-│   │   │   ├── Welcome.tsx  # Boas-vindas
-│   │   │   ├── Services.tsx # Cards de serviços
-│   │   │   ├── About.tsx    # Sobre a psicóloga (completo)
-│   │   │   └── TherapyImportance.tsx # Importância da terapia
-│   │   └── ui/              # Componentes reutilizáveis
-│   ├── App.tsx              # Componente principal
-│   ├── main.tsx             # Ponto de entrada
-│   └── index.css            # Estilos globais e Tailwind
-├── index.html
-├── package.json
-├── vite.config.ts
-├── tsconfig.json
+│   │   ├── layout/
+│   │   │   ├── Footer.tsx
+│   │   │   └── Navbar.tsx
+│   │   ├── sections/
+│   │   │   ├── About.tsx
+│   │   │   ├── Hero.tsx
+│   │   │   ├── IntegrativePractices.tsx
+│   │   │   ├── Resources.tsx
+│   │   │   ├── Services.tsx
+│   │   │   └── TherapyImportance.tsx
+│   │   └── ui/
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+│   ├── vite.config.ts
+│   └── tsconfig.json
 ├── tailwind.config.js
 └── README.md
 ```
-
----
 
 ## 🎨 Paleta de Cores
 
@@ -104,12 +98,22 @@ O projeto utiliza a identidade visual da marca:
 
 | Cor | Hexadecimal | Uso |
 |-----|-------------|-----|
-| **Primary** | `#A1A491` | Títulos principais, detalhes |
-| **Secondary** | `#CEBABF` | Subtítulos, aspas, bordas |
+| **Primary** | `#A1A491` | Títulos principais, detalhes, gradientes |
+| **Secondary** | `#CEBABF` | Subtítulos, aspas, bordas, destaques |
 | **Footer** | `#47493A` | Fundo do rodapé |
 | **WhatsApp** | `#25D366` | Botões de contato |
 
----
+## 📱 Seções do Site
+
+| Ordem | Seção | Descrição |
+|-------|-------|-----------|
+| 1️⃣ | **Hero** | Apresentação inicial com frases animadas |
+| 2️⃣ | **Welcome** | Boas-vindas acolhedoras |
+| 3️⃣ | **Services** | Serviços oferecidos (9 cards) + Avaliações Especializadas |
+| 4️⃣ | **About** | Sobre a psicóloga, formação e experiências |
+| 5️⃣ | **IntegrativePractices** | Práticas Integrativas: Florais de Bach e Terapia Artística |
+| 6️⃣ | **TherapyImportance** | Importância da Terapia |
+| 7️⃣ | **Resources** | Materiais gratuitos e cartilhas para download |
 
 ## 💻 Como Executar Localmente
 
@@ -145,8 +149,6 @@ O projeto utiliza a identidade visual da marca:
    http://localhost:5173
    ```
 
----
-
 ## ☁️ Deploy na Vercel
 
 O projeto está configurado para deploy automático na Vercel:
@@ -165,8 +167,6 @@ vercel login
 vercel --prod
 ```
 
----
-
 ## 🤝 Contribuição
 
 Contribuições são sempre bem-vindas! Siga os passos:
@@ -177,15 +177,12 @@ Contribuições são sempre bem-vindas! Siga os passos:
 4. **Push** para a branch (`git push origin feature/nova-feature`)
 5. **Abra um Pull Request**
 
----
-
 ## 📞 Contato
 
-**Desenvolvedora Paula De Melo Souza**
 
-- 📧 Email: [paulamelo2404@gmail.com](mailto:paulamelo2404r@gmail.com)
+**Desenvolvimento**
 
----
+- 👩‍💻 Desenvolvido por: [Paula Melo](mailto:paulamelo2404@gmail.com)
 
 ## 📄 Licença
 
@@ -194,6 +191,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ---
 
 <div align="center">
-  <p>Desenvolvido Paula Melo</p>
+  <p>Desenvolvido com 💚 para saúde mental</p>
   <p>© 2026 Dra. Poliana Rangel Mattar. Todos os direitos reservados.</p>
 </div>
+```
