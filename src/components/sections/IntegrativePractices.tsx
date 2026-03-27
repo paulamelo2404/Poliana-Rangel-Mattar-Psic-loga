@@ -85,7 +85,7 @@ const IntegrativePractices = ({ colors }: IntegrativePracticesProps) => {
             <img 
               src="https://i.imgur.com/7xujiDj.jpeg"
               alt="Passeio à beira-mar - Joaquín Sorolla"
-              className="w-full h-full aspect-[4/3] object-cover md:aspect-auto md:max-h-[75vh] md:object-contain"
+              className="w-full h-full aspect-4/3 object-cover md:aspect-auto md:max-h-[75vh] md:object-contain"
             />
             {/* Legenda flutuante estilo galeria de arte */}
             <div className="absolute bottom-0 right-0 bg-white/90 backdrop-blur-sm px-4 py-2 text-xs text-gray-600 rounded-tl-xl font-medium shadow-sm">
@@ -201,7 +201,7 @@ const IntegrativePractices = ({ colors }: IntegrativePracticesProps) => {
             </p>
             
             {/* Foto da Terapia Artística */}
-            <div className="mt-6 rounded-xl overflow-hidden bg-white shadow-inner flex justify-center items-center h-[22rem]">
+            <div className="mt-6 rounded-xl overflow-hidden bg-white shadow-inner flex justify-center items-center h-88">
               <img 
                 src="https://static.wixstatic.com/media/4cbf56_ba1777f8244d4b87894981c3c7911e3e~mv2.jpg/v1/crop/x_24,y_0,w_564,h_800/fill/w_413,h_590,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/355187_orig.jpg"
                 alt="Terapia Artística Antroposófica"
@@ -225,8 +225,8 @@ const IntegrativePractices = ({ colors }: IntegrativePracticesProps) => {
           
           <div className="relative overflow-hidden">
             {/* Gradientes nas laterais para suavizar as bordas */}
-            <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-            <div className="absolute top-0 bottom-0 right-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute top-0 bottom-0 left-0 w-16 bg-linear-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute top-0 bottom-0 right-0 w-16 bg-linear-to-l from-white to-transparent z-10 pointer-events-none" />
 
             {/* Container animado com Framer Motion */}
             <motion.div 
