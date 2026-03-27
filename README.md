@@ -1,4 +1,4 @@
-```markdown
+
 # 🧠 Site Profissional - Dra. Poliana Rangel Mattar | Psicóloga
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -65,7 +65,7 @@ Este site foi desenvolvido com o objetivo de criar uma presença online profissi
 
 ## 📁 Estrutura do Projeto
 
-```´´
+```
 site-psicologa/
 ├── public/
 │   ├── favicon.ico
