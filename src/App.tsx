@@ -20,11 +20,10 @@ function App() {
     instagram: "@psipolimatt",
     // Links das fotos
     heroPhoto: "https://i.imgur.com/EAFpnZg.png",
-    welcomePhoto: "https://i.imgur.com/lyva6EF.jpeg",
+    welcomePhoto: "https://i.imgur.com/g3n4ZAr.jpeg", // Nova foto de boas-vindas
     aboutPhoto: "https://i.imgur.com/JuT40eC.png",
-    logoUrl: "https://i.imgur.com/ivYEb1V.png",
-    // Logo horizontal branca para a navbar
-    logoHorizontalUrl: "https://i.imgur.com/poKY6qD.png",
+    logoUrl: "https://i.imgur.com/C3uUjIX.png", // Logo redonda
+    logoHorizontalUrl: "https://i.imgur.com/poKY6qD.png", // Logo horizontal branca
     
     // Cores da marca
     colors: {
@@ -53,6 +52,7 @@ function App() {
         <Welcome
           name={psychologistData.name}
           photoUrl={psychologistData.welcomePhoto}
+          logoUrl={psychologistData.logoUrl}
           colors={psychologistData.colors}
         />
 
