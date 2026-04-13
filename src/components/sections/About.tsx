@@ -108,7 +108,7 @@ const About = ({ photoUrl, colors }: AboutProps) => {
 </div>
               
               <div className="space-y-5 text-gray-600 leading-relaxed text-lg">
-                <p className="text-gray-800 font-medium text-justify">
+                <p className="text-gray-500 font-medium text-justify">
                   Acredito na importância de um espaço de escuta acolhedor, respeitoso e livre de julgamentos, onde cada pessoa possa entrar em contato com suas emoções e encontrar caminhos para lidar com os desafios da vida.
                 </p>
                 <p className="text-justify">
