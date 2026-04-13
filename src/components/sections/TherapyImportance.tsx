@@ -99,10 +99,10 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
               <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
             </div>
             
-            {/* Card com verde #47493A */}
+            {/* Card com verde #55753C */}
             <div 
               className="p-8 rounded-3xl text-white"
-              style={{ backgroundColor: '#47493A' }}
+              style={{ backgroundColor: '#55753C' }}
             >
               <h3 className="text-2xl font-black mb-4">Um lugar seguro para ser você</h3>
               <p className="text-white/90 leading-relaxed mb-4">
@@ -159,7 +159,7 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
             </div>
           </motion.div>
 
-          {/* Linha 3: Logo redonda + Texto de impacto */}
+          {/* Linha 3: Logo redonda maior + Texto de impacto */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -172,19 +172,20 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
                   className="absolute inset-0 rounded-full blur-2xl opacity-50"
                   style={{ backgroundColor: colors.secondary }}
                 />
+                {/* Logo redonda - TAMANHO AUMENTADO */}
                 <img 
                   src="https://i.imgur.com/ivYEb1V.png" 
                   alt="Logo Poliana Rangel Mattar"
-                  className="relative w-48 h-48 rounded-full object-cover border-4 border-white shadow-2xl"
+                  className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-2xl"
                 />
               </div>
             </div>
             
             <div className="lg:col-span-2">
-              {/* Card com verde #47493A */}
+              {/* Card com verde #55753C */}
               <div 
                 className="p-8 rounded-3xl text-white"
-                style={{ backgroundColor: '#47493A' }}
+                style={{ backgroundColor: '#55753C' }}
               >
                 <div className="text-xl leading-relaxed font-light italic whitespace-pre-line">
                   "O universo inteiro se encontra em evolução.
@@ -198,16 +199,12 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
                 </div>
                 <p className="text-right font-medium mt-4 text-white/90">— Ulrich Schaffer</p>
                 <div className="flex items-center gap-4 mt-6 pt-6 border-t border-white/10">
-                  {/* Foto da Poliana pequenininha */}
+                  {/* Logo HORIZONTAL BRANCA substituindo a foto da Poliana */}
                   <img 
-                    src="https://i.imgur.com/ivYEb1V.png" 
+                    src="https://i.imgur.com/poKY6qD.png" 
                     alt="Poliana Rangel Mattar"
-                    className="w-12 h-12 rounded-full object-cover border-2 border-white"
+                    className="h-12 w-auto object-contain"
                   />
-                  <div>
-                    <p className="font-bold">Poliana Rangel Mattar</p>
-                    <p className="text-sm text-white/70">Psicóloga • CRP 16ª/6821</p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -240,7 +237,7 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
                 }}
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.087-.177.181-.076.355.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771z"/>
                 </svg>
                 (27) 99579-7867
               </a>

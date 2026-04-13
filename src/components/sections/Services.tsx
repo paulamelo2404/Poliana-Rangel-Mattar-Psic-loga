@@ -191,7 +191,7 @@ const Services = ({ colors }: ServicesProps) => {
         >
           <div 
             className="rounded-2xl p-8"
-            style={{ backgroundColor: '#47493A' }}
+            style={{ backgroundColor: '#55753C' }}
           >
             <div className="text-center mb-8">
               <h3 
