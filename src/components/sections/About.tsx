@@ -86,9 +86,9 @@ const About = ({ photoUrl, colors }: AboutProps) => {
                   SOBRE MIM
                 </span>
               </div>
-              
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-gray-900">
-                Poliana Rangel Mattar
+
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-[#626d65]">
+                Dra. Poliana Rangel Mattar
               </h2>
               
              <div className="mb-8">
@@ -132,7 +132,7 @@ const About = ({ photoUrl, colors }: AboutProps) => {
               className="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/40 relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-full h-1" style={{ backgroundColor: colors.primary }} />
-              <h4 className="text-2xl font-bold mb-8 text-gray-900">
+              <h4 className="text-2xl font-bold mb-8 text-[#626d65]">
                 Formação Acadêmica
               </h4>
               
@@ -171,7 +171,7 @@ const About = ({ photoUrl, colors }: AboutProps) => {
               className="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/40 relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-full h-1" style={{ backgroundColor: colors.secondary }} />
-              <h4 className="text-2xl font-bold mb-8 text-gray-900">
+              <h4 className="text-2xl font-bold mb-8 text-[#626d65]">
                 Onde já atuei
               </h4>
               <ul className="space-y-5">

@@ -107,8 +107,8 @@ const IntegrativePractices = ({ colors }: IntegrativePracticesProps) => {
             sempre a singularidade e o momento de cada pessoa.
           </p>
           <p className="text-gray-700 leading-relaxed mt-4">
-            As abordagens utilizadas por mim são <span className="font-semibold" style={{ color: colors.secondary }}>Florais de Bach</span> e{' '}
-            <span className="font-semibold" style={{ color: colors.secondary }}>Terapia Artística Antroposófica</span>, 
+            As abordagens utilizadas por mim são <span className="font-bold" style={{ color: '#626d65' }}>Florais de Bach</span> e{' '}
+            <span className="font-bold" style={{ color: '#626d65' }}>Terapia Artística Antroposófica</span>, 
             que podem favorecer processos de equilibrio interno e ampliação da consciência emocional.
           </p>
         </motion.div>
