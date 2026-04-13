@@ -15,8 +15,6 @@ interface FooterProps {
 
 const Footer = ({ 
   name, 
-  crp,
-  logoUrl,
   phone = "(27) 99579-7867", 
   email = "psipolianamattar@gmail.com", 
   instagram = "@psipolimatt",
@@ -30,14 +28,14 @@ const Footer = ({
   const instagramUrl = `https://instagram.com/${instagram.replace('@', '')}`;
   const emailUrl = `mailto:${email}`;
 
-  // Menu rápido - ADICIONADO CARTILHAS
+  // Menu rápido
   const quickLinks = [
     { label: 'Início', href: '#inicio' },
     { label: 'Boas-vindas', href: '#welcome' },
     { label: 'Serviços', href: '#services' },
     { label: 'Sobre', href: '#about' },
     { label: 'Importância', href: '#importance' },
-    { label: 'Cartilhas', href: '#resources' }, // NOVO
+    { label: 'Cartilhas', href: '#resources' },
   ];
 
   // Serviços resumidos
@@ -50,7 +48,7 @@ const Footer = ({
   ];
 
   return (
-    <footer className="relative overflow-hidden" style={{ backgroundColor: '#47493A' }}>
+    <footer className="relative overflow-hidden" style={{ backgroundColor: '#3f562b' }}>
       
       {/* Elementos decorativos de fundo mais suaves para essa cor */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
@@ -75,7 +73,7 @@ const Footer = ({
         {/* Grid principal do footer */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
           
-          {/* Coluna 1: Logo e Sobre (4 colunas) */}
+          {/* Coluna 1: Logo Horizontal e Sobre (4 colunas) */}
           <div className="lg:col-span-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -84,25 +82,16 @@ const Footer = ({
               viewport={{ once: true }}
               className="flex flex-col items-center md:items-start"
             >
-              {/* Logo redonda */}
-              <div className="mb-4">
-                <div className="w-20 h-20 rounded-full overflow-hidden border-3 border-white/30 shadow-lg">
-                  <img 
-                    src={logoUrl}
-                    alt={name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              {/* Logo horizontal branca */}
+              <div className="mb-6">
+                <img 
+                  src="https://i.imgur.com/poKY6qD.png"
+                  alt={name}
+                  className="h-16 w-auto object-contain"
+                />
               </div>
               
-              <h3 
-                className="text-2xl font-bold mb-2 text-center md:text-left"
-                style={{ color: colors.secondary }}
-              >
-                {name}
-              </h3>
-              <p className="text-gray-300 mb-2 text-center md:text-left">{crp}</p>
-              <p className="text-gray-400 text-sm leading-relaxed max-w-sm text-center md:text-left">
+              <p className="text-gray-200 text-sm leading-relaxed max-w-sm text-center md:text-left">
                 Cuidando da saúde mental com acolhimento, ética e compromisso. 
                 Atendimento online e presencial para pacientes no Brasil e no exterior.
               </p>
@@ -203,7 +192,7 @@ const Footer = ({
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-gray-300 hover:text-green-400 transition-colors group justify-center md:justify-start"
+                  className="flex items-center gap-3 text-white hover:text-green-400 transition-colors group justify-center md:justify-start"
                 >
                   <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center group-hover:bg-green-500/30 transition-colors">
                     <svg className="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 24 24">
@@ -216,7 +205,7 @@ const Footer = ({
                 {/* Email */}
                 <a 
                   href={emailUrl}
-                  className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group justify-center md:justify-start"
+                  className="flex items-center gap-3 text-white hover:text-white transition-colors group justify-center md:justify-start"
                 >
                   <div 
                     className="w-8 h-8 rounded-lg flex items-center justify-center group-hover:opacity-80 transition-colors"
@@ -234,7 +223,7 @@ const Footer = ({
                   href={instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-gray-300 hover:text-pink-400 transition-colors group justify-center md:justify-start"
+                  className="flex items-center gap-3 text-white hover:text-pink-400 transition-colors group justify-center md:justify-start"
                 >
                   <div className="w-8 h-8 bg-pink-500/20 rounded-lg flex items-center justify-center group-hover:bg-pink-500/30 transition-colors">
                     <svg className="w-4 h-4 text-pink-400" fill="currentColor" viewBox="0 0 24 24">
@@ -265,10 +254,10 @@ const Footer = ({
         <div className="border-t border-white/10 my-8"></div>
 
         {/* Copyright e créditos */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white">
           <p>© {currentYear} {name}. Todos os direitos reservados.</p>
           <p className="mt-2 md:mt-0">
-            Desenvolvido por <a href="mailto:paulamelo2404@gmail.com" className="text-gray-400 hover:text-white transition-colors">paulamelo2404@gmail.com</a>
+            Desenvolvido por <a href="mailto:paulamelo2404@gmail.com" className="text-white hover:text-white transition-colors">paulamelo2404@gmail.com</a>
           </p>
         </div>
       </div>
