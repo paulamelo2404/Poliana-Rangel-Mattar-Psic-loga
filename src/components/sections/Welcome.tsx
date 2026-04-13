@@ -39,7 +39,7 @@ const Welcome = ({ name, photoUrl, logoUrl, colors }: WelcomeProps) => {
 
               <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
                 
-                <p className="text-xl font-medium text-gray-800">
+                <p className="text-xl font-medium text-gray-500">
                   É provável que você tenha chegado até aqui carregando um peso que, muitas vezes, ninguém mais vê.
                 </p>
 
