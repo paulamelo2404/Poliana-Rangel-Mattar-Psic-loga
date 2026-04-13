@@ -161,8 +161,7 @@ const Hero = ({
             className="text-left px-4 sm:px-6 lg:px-0 order-2 lg:order-1"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 lg:mb-4">
-              <span style={{ color: colors.secondary }}>Dra.</span>{' '}
-              <span style={{ color: colors.primary }}>{name}</span>
+              <span style={{ color: colors.primary }}>Dra. {name}</span>
             </h1>
             
             <p className="text-lg sm:text-xl text-gray-600 mb-1">{title}</p>
@@ -247,7 +246,7 @@ const Hero = ({
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: colors.primary }} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                 </svg>
-                <span>Vasta Experiência </span>
+                <span>Vasta Experiência</span>
               </div>
             </motion.div>
           </motion.div>
