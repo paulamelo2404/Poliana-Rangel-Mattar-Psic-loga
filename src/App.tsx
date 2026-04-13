@@ -23,7 +23,7 @@ function App() {
     welcomePhoto: "https://i.imgur.com/g3n4ZAr.jpeg", // Nova foto de boas-vindas
     aboutPhoto: "https://i.imgur.com/JuT40eC.png",
     logoUrl: "https://i.imgur.com/C3uUjIX.png", // Logo redonda
-    logoHorizontalUrl: "https://i.imgur.com/poKY6qD.png", // Logo horizontal branca
+    logoHorizontalUrl: "https://i.imgur.com/iP4slrQ.png", // logo horizontal 
     
     // Cores da marca
     colors: {

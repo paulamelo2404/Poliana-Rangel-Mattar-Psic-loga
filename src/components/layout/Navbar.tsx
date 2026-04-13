@@ -43,7 +43,7 @@ const Navbar = ({ logoHorizontalUrl }: NavbarProps) => {
           scrolled ? 'py-2' : 'py-4'
         }`}>
           
-          {/* Logo horizontal branca */}
+          {/* Logo horizontal - NOVA LOGO */}
           <a 
             href="/" 
             className="flex items-center group"

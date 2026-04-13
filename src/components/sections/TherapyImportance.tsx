@@ -201,7 +201,7 @@ const TherapyImportance = ({ colors }: TherapyImportanceProps) => {
                 <div className="flex items-center gap-4 mt-6 pt-6 border-t border-white/10">
                   {/* Logo HORIZONTAL BRANCA substituindo a foto da Poliana */}
                   <img 
-                    src="https://i.imgur.com/poKY6qD.png" 
+                    src="https://i.imgur.com/iP4slrQ.png" 
                     alt="Poliana Rangel Mattar"
                     className="h-12 w-auto object-contain"
                   />

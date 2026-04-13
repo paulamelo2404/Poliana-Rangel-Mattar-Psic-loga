@@ -85,7 +85,7 @@ const Footer = ({
               {/* Logo horizontal branca */}
               <div className="mb-6">
                 <img 
-                  src="https://i.imgur.com/poKY6qD.png"
+                  src="https://i.imgur.com/iP4slrQ.png"
                   alt={name}
                   className="h-16 w-auto object-contain"
                 />
