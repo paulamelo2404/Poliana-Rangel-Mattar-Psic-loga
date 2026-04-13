@@ -23,6 +23,9 @@ function App() {
     welcomePhoto: "https://i.imgur.com/lyva6EF.jpeg",
     aboutPhoto: "https://i.imgur.com/JuT40eC.png",
     logoUrl: "https://i.imgur.com/ivYEb1V.png",
+    // Logo horizontal branca para a navbar
+    logoHorizontalUrl: "https://i.imgur.com/poKY6qD.png",
+    
     // Cores da marca
     colors: {
       primary: "#A1A491",
@@ -33,7 +36,7 @@ function App() {
 
   return (
     <>
-      <Navbar name={psychologistData.name} logoUrl={psychologistData.logoUrl} />
+      <Navbar logoHorizontalUrl={psychologistData.logoHorizontalUrl} />
 
       <main>
         {/* 1. Hero - Apresentação inicial */}

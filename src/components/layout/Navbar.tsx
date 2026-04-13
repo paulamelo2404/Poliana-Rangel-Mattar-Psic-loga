@@ -2,15 +2,13 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
-  name: string;
-  logoUrl: string; // URL da foto para a logo (agora obrigatório)
+  logoHorizontalUrl: string; // Logo horizontal branca para a navbar
 }
 
-const Navbar = ({ name, logoUrl }: NavbarProps) => {
+const Navbar = ({ logoHorizontalUrl }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Detectar scroll para ajustar opacidade/altura
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -27,11 +25,9 @@ const Navbar = ({ name, logoUrl }: NavbarProps) => {
     { label: 'Sobre', href: '#about' },
     { label: 'Cartilhas', href: '#resources' },
     { label: 'Importância', href: '#importance' },
-    
   ];
 
-  // Número do WhatsApp (formatado)
-  const phoneNumber = "5527995797867"; // (27) 99579-7867
+  const phoneNumber = "5527995797867";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=Olá! Vi seu site e gostaria de mais informações.`;
 
   return (
@@ -47,33 +43,19 @@ const Navbar = ({ name, logoUrl }: NavbarProps) => {
           scrolled ? 'py-2' : 'py-4'
         }`}>
           
-          {/* Logo com nome e foto redonda */}
+          {/* Logo horizontal branca */}
           <a 
             href="/" 
-            className="flex items-center gap-3 group"
+            className="flex items-center group"
           >
-            {/* Foto redonda pequena - AGORA OBRIGATÓRIA */}
             <div className="relative">
-              <div 
-                className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30 transition-all duration-300 group-hover:scale-105 group-hover:border-white/60"
-                style={{
-                  boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
-                }}
-              >
-                <img 
-                  src={logoUrl}
-                  alt={name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Brilho sutil no hover */}
-              <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 transition-opacity bg-white" />
+              <img 
+                src={logoHorizontalUrl}
+                alt="Poliana Rangel Mattar Psicóloga"
+                className="h-10 md:h-12 w-auto transition-all duration-300 group-hover:opacity-90"
+              />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity bg-white rounded" />
             </div>
-            
-            {/* Nome (visível apenas em desktop) */}
-            <span className="hidden md:block font-medium text-white text-lg">
-              {name}
-            </span>
           </a>
 
           {/* Desktop Menu */}
@@ -88,7 +70,7 @@ const Navbar = ({ name, logoUrl }: NavbarProps) => {
               </a>
             ))}
             
-            {/* Botão WhatsApp Desktop - Destacado */}
+            {/* Botão WhatsApp Desktop */}
             <a
               href={whatsappUrl}
               target="_blank"
