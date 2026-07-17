@@ -22,9 +22,11 @@ const Navbar = ({ logoHorizontalUrl }: NavbarProps) => {
     { label: 'Início', href: '/' },
     { label: 'Boas-vindas', href: '#welcome' },
     { label: 'Serviços', href: '#services' },
+    { label: 'Neuropsicologia', href: '/neuropsicologia' }, // ✅ ADICIONADO
     { label: 'Sobre', href: '#about' },
-    { label: 'Cartilhas', href: '#resources' },
+    { label: 'Práticas', href: '#praticas' }, // ✅ ADICIONADO (seção IntegrativePractices)
     { label: 'Importância', href: '#importance' },
+    { label: 'Cartilhas', href: '#resources' },
   ];
 
   const phoneNumber = "5527995797867";
@@ -43,7 +45,7 @@ const Navbar = ({ logoHorizontalUrl }: NavbarProps) => {
           scrolled ? 'py-2' : 'py-4'
         }`}>
           
-          {/* Logo horizontal - NOVA LOGO */}
+          {/* Logo horizontal */}
           <a 
             href="/" 
             className="flex items-center group"

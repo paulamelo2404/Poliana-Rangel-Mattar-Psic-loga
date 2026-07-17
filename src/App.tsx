@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
 import About from "./components/sections/About";
@@ -7,6 +8,8 @@ import Resources from "./components/sections/Resources";
 import Services from "./components/sections/Services";
 import TherapyImportance from "./components/sections/TherapyImportance";
 import Welcome from "./components/sections/Welcome";
+import NeuropsicologiaResumo from "./components/sections/NeuropsicologiaResumo";
+import Neuropsicologia from "./pages/Neuropsicologia";
 
 function App() {
   // Dados da Psicóloga
@@ -20,11 +23,10 @@ function App() {
     instagram: "@psipolimatt",
     // Links das fotos
     heroPhoto: "https://i.imgur.com/EAFpnZg.png",
-    welcomePhoto: "https://i.imgur.com/g3n4ZAr.jpeg", // Nova foto de boas-vindas
+    welcomePhoto: "https://i.imgur.com/g3n4ZAr.jpeg",
     aboutPhoto: "https://i.imgur.com/JuT40eC.png",
-    logoUrl: "https://i.imgur.com/C3uUjIX.png", // Logo redonda
-    logoHorizontalUrl: "https://i.imgur.com/iP4slrQ.png", // logo horizontal 
-    
+    logoUrl: "https://i.imgur.com/C3uUjIX.png",
+    logoHorizontalUrl: "https://i.imgur.com/iP4slrQ.png",
     // Cores da marca
     colors: {
       primary: "#A1A491",
@@ -34,45 +36,58 @@ function App() {
   };
 
   return (
-    <>
+    <Router>
       <Navbar logoHorizontalUrl={psychologistData.logoHorizontalUrl} />
 
       <main>
-        {/* 1. Hero - Apresentação inicial */}
-        <Hero
-          name={psychologistData.name}
-          title={psychologistData.title}
-          crp={psychologistData.crp}
-          phone={psychologistData.phone}
-          photoUrl={psychologistData.heroPhoto}
-          colors={psychologistData.colors}
-        />
+        <Routes>
+          {/* Página principal */}
+          <Route path="/" element={
+            <>
+              {/* 1. Hero - Apresentação inicial */}
+              <Hero
+                name={psychologistData.name}
+                title={psychologistData.title}
+                crp={psychologistData.crp}
+                phone={psychologistData.phone}
+                photoUrl={psychologistData.heroPhoto}
+                colors={psychologistData.colors}
+              />
 
-        {/* 2. Welcome - Boas-vindas */}
-        <Welcome
-          name={psychologistData.name}
-          photoUrl={psychologistData.welcomePhoto}
-          logoUrl={psychologistData.logoUrl}
-          colors={psychologistData.colors}
-        />
+              {/* 2. Welcome - Boas-vindas */}
+              <Welcome
+                name={psychologistData.name}
+                photoUrl={psychologistData.welcomePhoto}
+                logoUrl={psychologistData.logoUrl}
+                colors={psychologistData.colors}
+              />
 
-        {/* 3. Services - Serviços */}
-        <Services colors={psychologistData.colors} />
+              {/* 3. Services - Serviços */}
+              <Services colors={psychologistData.colors} />
 
-        {/* 4. About - Sobre mim */}
-        <About
-          photoUrl={psychologistData.aboutPhoto}
-          colors={psychologistData.colors}
-        />
+              {/* 4. Neuropsicologia - Resumo */}
+              <NeuropsicologiaResumo colors={psychologistData.colors} />
 
-        {/* 5. IntegrativePractices - Práticas Integrativas */}
-        <IntegrativePractices colors={psychologistData.colors} />
+              {/* 5. About - Sobre mim */}
+              <About
+                photoUrl={psychologistData.aboutPhoto}
+                colors={psychologistData.colors}
+              />
 
-        {/* 6. TherapyImportance - Importância da Terapia */}
-        <TherapyImportance colors={psychologistData.colors} />
+              {/* 6. IntegrativePractices - Práticas Integrativas */}
+              <IntegrativePractices colors={psychologistData.colors} />
 
-        {/* 7. Resources - Materiais e Cartilhas */}
-        <Resources colors={psychologistData.colors} />
+              {/* 7. TherapyImportance - Importância da Terapia */}
+              <TherapyImportance colors={psychologistData.colors} />
+
+              {/* 8. Resources - Materiais e Cartilhas */}
+              <Resources colors={psychologistData.colors} />
+            </>
+          } />
+
+          {/* Página de Neuropsicologia */}
+          <Route path="/neuropsicologia" element={<Neuropsicologia colors={psychologistData.colors} />} />
+        </Routes>
       </main>
 
       <Footer
@@ -84,7 +99,7 @@ function App() {
         instagram={psychologistData.instagram}
         colors={psychologistData.colors}
       />
-    </>
+    </Router>
   );
 }
 
