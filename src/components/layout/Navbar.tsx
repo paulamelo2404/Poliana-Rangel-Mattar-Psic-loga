@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
-  logoHorizontalUrl: string; // Logo horizontal branca para a navbar
+  logoHorizontalUrl: string;
 }
 
 const Navbar = ({ logoHorizontalUrl }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,13 +21,72 @@ const Navbar = ({ logoHorizontalUrl }: NavbarProps) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Função para navegar para o topo (Hero)
+  const navigateToHome = () => {
+    setIsOpen(false);
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 150);
+    }
+  };
+
+  // Função para navegar para a home e fazer scroll até a seção
+  const navigateToHomeSection = (sectionId: string) => {
+    setIsOpen(false);
+    if (location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      return;
+    }
+
+    navigate('/');
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 200);
+  };
+
+  // Função para navegar para páginas específicas
+  const navigateToPage = (path: string) => {
+    setIsOpen(false);
+    navigate(path);
+  };
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+
+    // Se for "Início" (href = '/')
+    if (href === '/') {
+      navigateToHome();
+      return;
+    }
+
+    // Se for link para página (começa com / e não é o Início)
+    if (href.startsWith('/')) {
+      navigateToPage(href);
+      return;
+    }
+
+    // Se for âncora (#) - extrai o ID sem o #
+    const sectionId = href.replace('#', '');
+    navigateToHomeSection(sectionId);
+  };
+
   const menuItems = [
     { label: 'Início', href: '/' },
     { label: 'Boas-vindas', href: '#welcome' },
     { label: 'Serviços', href: '#services' },
-    { label: 'Neuropsicologia', href: '/neuropsicologia' }, // ✅ ADICIONADO
+    { label: 'Neuropsicologia', href: '/neuropsicologia' },
     { label: 'Sobre', href: '#about' },
-    { label: 'Práticas', href: '#praticas' }, // ✅ ADICIONADO (seção IntegrativePractices)
+    { label: 'Práticas', href: '#praticas' },
     { label: 'Importância', href: '#importance' },
     { label: 'Cartilhas', href: '#resources' },
   ];
@@ -46,9 +108,13 @@ const Navbar = ({ logoHorizontalUrl }: NavbarProps) => {
         }`}>
           
           {/* Logo horizontal */}
-          <a 
-            href="/" 
-            className="flex items-center group"
+          <a
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigateToHome();
+            }}
+            className="flex items-center group cursor-pointer"
           >
             <div className="relative">
               <img 
@@ -66,7 +132,8 @@ const Navbar = ({ logoHorizontalUrl }: NavbarProps) => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-white/90 hover:text-white text-sm font-medium transition-all hover:scale-105"
+                onClick={(e) => handleNavClick(e, item.href)}
+                className="text-white/90 hover:text-white text-sm font-medium transition-all hover:scale-105 cursor-pointer"
               >
                 {item.label}
               </a>
@@ -95,7 +162,7 @@ const Navbar = ({ logoHorizontalUrl }: NavbarProps) => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - CORRIGIDO */}
         {isOpen && (
           <div className="md:hidden mt-2 pb-4">
             <div className="bg-white rounded-lg shadow-xl overflow-hidden">
@@ -103,8 +170,26 @@ const Navbar = ({ logoHorizontalUrl }: NavbarProps) => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0"
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    
+                    // Se for "Início"
+                    if (item.href === '/') {
+                      navigateToHome();
+                      return;
+                    }
+
+                    // Se for link para página
+                    if (item.href.startsWith('/')) {
+                      navigateToPage(item.href);
+                      return;
+                    }
+
+                    // Se for âncora
+                    const sectionId = item.href.replace('#', '');
+                    navigateToHomeSection(sectionId);
+                  }}
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0 cursor-pointer"
                 >
                   {item.label}
                 </a>
