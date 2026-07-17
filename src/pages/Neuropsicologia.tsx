@@ -140,14 +140,14 @@ const Neuropsicologia = ({ colors }: NeuropsicologiaProps) => {
 
           <div className="grid md:grid-cols-2 gap-6 items-start">
             
-            {/* Esquerda */}
+            {/* Esquerda - Parte 1 do texto + Imagem 1 */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
               <p className="text-gray-700 leading-relaxed mb-4">
-                Esse processo é indicado para crianças, adolescentes, adultos e idosos que apresentam dificuldades de aprendizagem, problemas de atenção e memória, suspeita de TDAH, Autismo (TEA), Altas Habilidades, deficiência intelectual...
+                Esse processo é indicado para crianças, adolescentes, adultos e idosos que apresentam dificuldades de aprendizagem, problemas de atenção e memória, suspeita de Transtorno do Déficit de Atenção/Hiperatividade (TDAH), Transtorno do Espectro Autista (TEA), Altas Habilidades/Superdotação, deficiência intelectual, transtornos específicos de aprendizagem, sequelas de lesões neurológicas...
               </p>
               <div className="rounded-xl overflow-hidden shadow-md max-w-sm mx-auto md:mx-0">
                 <img 
@@ -158,7 +158,7 @@ const Neuropsicologia = ({ colors }: NeuropsicologiaProps) => {
               </div>
             </motion.div>
 
-            {/* Direita */}
+            {/* Direita - Imagem 2 + Parte 2 do texto */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -172,7 +172,7 @@ const Neuropsicologia = ({ colors }: NeuropsicologiaProps) => {
                 />
               </div>
               <p className="text-gray-700 leading-relaxed">
-                ...sequelas de lesões neurológicas, AVCs, traumatismos cranianos, epilepsia, doenças neurodegenerativas, além de alterações cognitivas relacionadas ao envelhecimento.
+                ...acidentes vasculares cerebrais, traumatismos cranianos, epilepsia, doenças neurodegenerativas, além de alterações cognitivas relacionadas ao envelhecimento. Além disso, a avaliação é plenamente adequada para qualquer pessoa que busque autoconhecimento e deseje compreender de forma clara o seu próprio funcionamento cognitivo e emocional.
               </p>
             </motion.div>
           </div>
