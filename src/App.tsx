@@ -10,6 +10,7 @@ import TherapyImportance from "./components/sections/TherapyImportance";
 import Welcome from "./components/sections/Welcome";
 import NeuropsicologiaResumo from "./components/sections/NeuropsicologiaResumo";
 import Neuropsicologia from "./pages/Neuropsicologia";
+import ScrollToTop from './components/ScrollToTop'; 
 
 function App() {
   // Dados da Psicóloga
@@ -37,6 +38,9 @@ function App() {
 
   return (
     <Router>
+
+      <ScrollToTop />
+
       <Navbar logoHorizontalUrl={psychologistData.logoHorizontalUrl} />
 
       <main>
