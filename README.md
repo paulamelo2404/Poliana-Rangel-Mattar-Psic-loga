@@ -99,8 +99,7 @@ site-psicologa/
 ├── dist/
 ├── node_modules/
 └── README.md
-´´´´
-
+````
 ## 🎨 Paleta de Cores
 
 O projeto utiliza a identidade visual da marca:
