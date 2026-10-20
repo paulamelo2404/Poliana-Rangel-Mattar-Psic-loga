@@ -25,7 +25,7 @@ function App() {
     // Links das fotos
     heroPhoto: "https://i.postimg.cc/fMczDhfy/blogs-Ativo-1.png",
     welcomePhoto: "https://i.imgur.com/PsywgyW.jpeg",
-    aboutPhoto: "https://i.imgur.com/JuT40eC.png",
+    aboutPhoto: "https://i.postimg.cc/6pcLNmQZ/blogs-Ativo-3.png",
     logoUrl: "https://i.imgur.com/C3uUjIX.png",
     logoHorizontalUrl: "https://i.imgur.com/iP4slrQ.png",
     // Cores da marca

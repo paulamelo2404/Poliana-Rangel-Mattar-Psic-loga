@@ -22,7 +22,7 @@ const About = ({ photoUrl, colors }: AboutProps) => {
     mestrado: ["Segurança Pública com foco em Direitos Humanos"]
   };
 
-  // Onde já atuei (removido Internacional)
+  // Onde já atuei
   const atuacoes = [
     "Saúde - CAPSIJ (atendimento infantil e adolescente)",
     "Saúde Mental - Clínica particular (psicoterapia e avaliações)",
@@ -41,7 +41,6 @@ const About = ({ photoUrl, colors }: AboutProps) => {
     "Psicomotricidade",
     "Método Denver (Prevenção Precoce)", 
     "Avaliação Psicológica",
-  
   ];
 
   return (
@@ -51,7 +50,7 @@ const About = ({ photoUrl, colors }: AboutProps) => {
           
           <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-center mb-24">
             
-            {/* Coluna da Foto - sem sombreado */}
+            {/* Coluna da Foto */}
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
@@ -66,10 +65,7 @@ const About = ({ photoUrl, colors }: AboutProps) => {
                     className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
-                
-                <div className="absolute -bottom-8 left-0 w-full text-center lg:text-left text-[10px] text-gray-400 font-medium tracking-widest uppercase">
-                  Foto: Chris Gama | Mira Creatives
-                </div>
+                {/* Créditos removidos daqui */}
               </div>
             </motion.div>
 
@@ -92,20 +88,20 @@ const About = ({ photoUrl, colors }: AboutProps) => {
               </h2>
               
              <div className="mb-8">
-  <p className="text-lg font-medium" style={{ color: colors.primary }}>
-    Psicóloga • Neuropsicóloga • Neuropsicopedagoga • Práticas Integrativas
-  </p>
-  <p 
-    className="text-sm font-medium mt-2 px-3 py-1 rounded-full inline-block w-fit"
-    style={{ 
-      background: `${colors.primary}10`,
-      color: colors.primary,
-      border: `1px solid ${colors.secondary}30`
-    }}
-  >
-    CRP 16ª/6821
-  </p>
-</div>
+                <p className="text-lg font-medium" style={{ color: colors.primary }}>
+                  Psicóloga • Neuropsicóloga • Neuropsicopedagoga • Práticas Integrativas
+                </p>
+                <p 
+                  className="text-sm font-medium mt-2 px-3 py-1 rounded-full inline-block w-fit"
+                  style={{ 
+                    background: `${colors.primary}10`,
+                    color: colors.primary,
+                    border: `1px solid ${colors.secondary}30`
+                  }}
+                >
+                  CRP 16ª/6821
+                </p>
+              </div>
               
               <div className="space-y-5 text-gray-600 leading-relaxed text-lg">
                 <p className="text-gray-500 font-medium text-justify">
@@ -189,7 +185,7 @@ const About = ({ photoUrl, colors }: AboutProps) => {
             </motion.div>
           </div>
 
-          {/* Especializações (Estilo Moderno com Alto Contraste) */}
+          {/* Especializações */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
