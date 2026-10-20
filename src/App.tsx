@@ -24,7 +24,7 @@ function App() {
     instagram: "@psipolimatt",
     // Links das fotos
     heroPhoto: "https://i.postimg.cc/fMczDhfy/blogs-Ativo-1.png",
-    welcomePhoto: "https://i.imgur.com/g3n4ZAr.jpeg",
+    welcomePhoto: "https://i.imgur.com/PsywgyW.jpeg",
     aboutPhoto: "https://i.imgur.com/JuT40eC.png",
     logoUrl: "https://i.imgur.com/C3uUjIX.png",
     logoHorizontalUrl: "https://i.imgur.com/iP4slrQ.png",
