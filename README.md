@@ -1,3 +1,6 @@
+<div align="center">
+  <img src="https://i.postimg.cc/fMczDhfy/blogs-Ativo-1.png" alt="Logo Dra. Poliana Rangel Mattar" width="250" />
+</div>
 
 # 🧠 Site Profissional - Dra. Poliana Rangel Mattar | Psicóloga
 
@@ -7,7 +10,7 @@
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
-Site institucional moderno e responsivo desenvolvido para a psicóloga **Dra. Poliana Rangel Mattar**. O projeto apresenta seus serviços, formação acadêmica, práticas integrativas, materiais gratuitos e canal de contato direto via WhatsApp.
+Site institucional moderno e responsivo desenvolvido para a psicóloga **Dra. Poliana Rangel Mattar**. O projeto apresenta seus serviços, formação acadêmica, práticas integrativas, materiais gratuitos, página exclusiva de Neuropsicologia e canal de contato direto via WhatsApp.
 
 🔗 **Acesse o site:** [dra-polianamattar.vercel.app](https://dra-polianamattar.vercel.app)
 
@@ -18,7 +21,7 @@ Site institucional moderno e responsivo desenvolvido para a psicóloga **Dra. Po
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Paleta de Cores](#paleta-de-cores)
-- [Seções do Site](#seções-do-site)
+- [Seções e Páginas do Site](#seções-e-páginas-do-site)
 - [Como Executar](#como-executar)
 - [Deploy na Vercel](#deploy-na-vercel)
 - [Contribuição](#contribuição)
@@ -26,28 +29,29 @@ Site institucional moderno e responsivo desenvolvido para a psicóloga **Dra. Po
 
 ## 🎯 Sobre o Projeto
 
-Este site foi desenvolvido com o objetivo de criar uma presença online profissional para a Dra. Poliana, psicóloga com vasta experiência em psicoterapia, avaliações psicológicas e práticas integrativas. O projeto prioriza:
+Este site foi desenvolvido com o objetivo de criar uma presença online profissional para a Dra. Poliana, psicóloga com vasta experiência em psicoterapia, avaliações psicológicas (incluindo neuropsicológicas) e práticas integrativas. O projeto prioriza:
 
 - **Experiência do usuário** fluida e acolhedora
 - **Design responsivo** funcionando perfeitamente em mobile, tablet e desktop
-- **Carregamento rápido** e otimizado
+- **Navegação SPA** com React Router e scroll suave
 - **Acessibilidade** e boas práticas de SEO
 - **Canal direto** para contato via WhatsApp
 
 ## ✨ Funcionalidades
 
-- ✅ **Navbar fixa** com logo redonda e menu responsivo
+- ✅ **Navbar fixa** com logo, menu responsivo e lógica inteligente de navegação (âncoras e rotas)
 - ✅ **Hero section** com frases animadas sobre saúde mental (rotativo automático)
 - ✅ **Seção de boas-vindas** com texto acolhedor e foto profissional
-- ✅ **Serviços** em cards com descrições completas (9 especialidades)
-- ✅ **Avaliações Especializadas** com checklist detalhado
+- ✅ **Serviços** em cards com descrições completas e **Avaliações Especializadas** em checklist
+- ✅ **Seção Resumo de Neuropsicologia** na Home com botão "Saiba Mais"
+- ✅ **Página dedicada de Neuropsicologia** com informações detalhadas, público-alvo e metodologia
 - ✅ **Sobre mim** completo com formação, especializações e experiências
 - ✅ **Práticas Integrativas** com Florais de Bach e Terapia Artística Antroposófica
 - ✅ **Importância da terapia** seção de conscientização
 - ✅ **Materiais gratuitos** com cartilhas e publicações para download
 - ✅ **Footer** com links rápidos, serviços resumidos e contatos
-- ✅ **Botão flutuante do WhatsApp** (em todas as páginas)
-- ✅ **Scroll suave** para navegação por âncoras
+- ✅ **Botão do WhatsApp** de contato rápido
+- ✅ **ScrollToTop** para navegação iniciar sempre no topo da página
 - ✅ **100% responsivo** - se adapta a todos os tamanhos de tela
 
 ## 🚀 Tecnologias Utilizadas
@@ -55,6 +59,7 @@ Este site foi desenvolvido com o objetivo de criar uma presença online profissi
 | Tecnologia | Descrição |
 |------------|-----------|
 | **React** | Biblioteca para construção da interface |
+| **React Router DOM** | Roteamento de páginas (SPA) |
 | **TypeScript** | Tipagem estática para maior robustez |
 | **Tailwind CSS v4** | Framework CSS utilitário para estilização |
 | **Vite** | Build tool rápida para desenvolvimento |
@@ -64,33 +69,36 @@ Este site foi desenvolvido com o objetivo de criar uma presença online profissi
 | **Vercel** | Hospedagem e deploy contínuo |
 
 ## 📁 Estrutura do Projeto
-
-```
+´´´´
 site-psicologa/
 ├── public/
-│   ├── favicon.ico
-│   └── index.html
 ├── src/
-│   ├── components/
-│   │   ├── layout/
-│   │   │   ├── Footer.tsx
-│   │   │   └── Navbar.tsx
-│   │   ├── sections/
-│   │   │   ├── About.tsx
-│   │   │   ├── Hero.tsx
-│   │   │   ├── IntegrativePractices.tsx
-│   │   │   ├── Resources.tsx
-│   │   │   ├── Services.tsx
-│   │   │   └── TherapyImportance.tsx
-│   │   └── ui/
-│   ├── App.tsx
-│   ├── main.tsx
-│   ├── index.css
-│   ├── vite.config.ts
-│   └── tsconfig.json
-├── tailwind.config.js
+│ ├── components/
+│ │ ├── layout/
+│ │ │ ├── Footer.tsx
+│ │ │ └── Navbar.tsx
+│ │ ├── sections/
+│ │ │ ├── About.tsx
+│ │ │ ├── Hero.tsx
+│ │ │ ├── IntegrativePractices.tsx
+│ │ │ ├── NeuropsicologiaResumo.tsx
+│ │ │ ├── Resources.tsx
+│ │ │ ├── Services.tsx
+│ │ │ ├── TherapyImportance.tsx
+│ │ │ └── Welcome.tsx
+│ │ └── ui/
+│ ├── pages/
+│ ├── types/
+│ ├── ScrollToTop.tsx
+│ ├── App.tsx
+│ ├── index.css
+│ └── main.tsx
+├── .qodo/
+├── .vscode/
+├── dist/
+├── node_modules/
 └── README.md
-```
+´´´´
 
 ## 🎨 Paleta de Cores
 
@@ -101,19 +109,22 @@ O projeto utiliza a identidade visual da marca:
 | **Primary** | `#A1A491` | Títulos principais, detalhes, gradientes |
 | **Secondary** | `#CEBABF` | Subtítulos, aspas, bordas, destaques |
 | **Footer** | `#47493A` | Fundo do rodapé |
+| **Neuropsicologia** | `#55753C` | Fundo da seção de chamada de Neuropsicologia |
 | **WhatsApp** | `#25D366` | Botões de contato |
 
-## 📱 Seções do Site
+## 📱 Seções e Páginas do Site
 
-| Ordem | Seção | Descrição |
-|-------|-------|-----------|
+| Ordem | Seção / Página | Descrição |
+|-------|----------------|-----------|
 | 1️⃣ | **Hero** | Apresentação inicial com frases animadas |
 | 2️⃣ | **Welcome** | Boas-vindas acolhedoras |
-| 3️⃣ | **Services** | Serviços oferecidos (9 cards) + Avaliações Especializadas |
-| 4️⃣ | **About** | Sobre a psicóloga, formação e experiências |
-| 5️⃣ | **IntegrativePractices** | Práticas Integrativas: Florais de Bach e Terapia Artística |
-| 6️⃣ | **TherapyImportance** | Importância da Terapia |
-| 7️⃣ | **Resources** | Materiais gratuitos e cartilhas para download |
+| 3️⃣ | **Services** | Serviços oferecidos + Avaliações Especializadas |
+| 4️⃣ | **NeuropsicologiaResumo** | Chamada com botão "Saiba Mais" para a página dedicada |
+| 5️⃣ | **About** | Sobre a psicóloga, formação e experiências |
+| 6️⃣ | **IntegrativePractices** | Práticas Integrativas: Florais de Bach e Terapia Artística |
+| 7️⃣ | **TherapyImportance** | Importância da Terapia |
+| 8️⃣ | **Resources** | Materiais gratuitos e cartilhas para download |
+| ➕ | **Neuropsicologia (Página)** | Página exclusiva com detalhes sobre Avaliação Neuropsicológica |
 
 ## 💻 Como Executar Localmente
 
@@ -128,17 +139,18 @@ O projeto utiliza a identidade visual da marca:
    ```bash
    git clone https://github.com/seu-usuario/site-psicologa.git
    cd site-psicologa
-   ```
+
+   npm install
+# ou
+yarn install
 
 2. **Instale as dependências**
-   ```bash
-   npm install
-   # ou
-   yarn install
-   ```
 
-3. **Execute o servidor de desenvolvimento**
-   ```bash
+npm install
+# ou
+yarn install
+
+3. **Execute o servidor de desenvolvimento**   ```bash
    npm run dev
    # ou
    yarn dev
