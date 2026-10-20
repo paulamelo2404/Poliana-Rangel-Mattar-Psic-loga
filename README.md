@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.postimg.cc/fMczDhfy/blogs-Ativo-1.png" alt="Logo Dra. Poliana Rangel Mattar" width="250" />
+  <img src="https://i.imgur.com/C3uUjIX.png" alt="Logo Dra. Poliana Rangel Mattar" width="250" />
 </div>
 
 # 🧠 Site Profissional - Dra. Poliana Rangel Mattar | Psicóloga
@@ -69,30 +69,31 @@ Este site foi desenvolvido com o objetivo de criar uma presença online profissi
 | **Vercel** | Hospedagem e deploy contínuo |
 
 ## 📁 Estrutura do Projeto
-´´´´
+
+```text
 site-psicologa/
 ├── public/
 ├── src/
-│ ├── components/
-│ │ ├── layout/
-│ │ │ ├── Footer.tsx
-│ │ │ └── Navbar.tsx
-│ │ ├── sections/
-│ │ │ ├── About.tsx
-│ │ │ ├── Hero.tsx
-│ │ │ ├── IntegrativePractices.tsx
-│ │ │ ├── NeuropsicologiaResumo.tsx
-│ │ │ ├── Resources.tsx
-│ │ │ ├── Services.tsx
-│ │ │ ├── TherapyImportance.tsx
-│ │ │ └── Welcome.tsx
-│ │ └── ui/
-│ ├── pages/
-│ ├── types/
-│ ├── ScrollToTop.tsx
-│ ├── App.tsx
-│ ├── index.css
-│ └── main.tsx
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Footer.tsx
+│   │   │   └── Navbar.tsx
+│   │   ├── sections/
+│   │   │   ├── About.tsx
+│   │   │   ├── Hero.tsx
+│   │   │   ├── IntegrativePractices.tsx
+│   │   │   ├── NeuropsicologiaResumo.tsx
+│   │   │   ├── Resources.tsx
+│   │   │   ├── Services.tsx
+│   │   │   ├── TherapyImportance.tsx
+│   │   │   └── Welcome.tsx
+│   │   └── ui/
+│   ├── pages/
+│   ├── types/
+│   ├── ScrollToTop.tsx
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
 ├── .qodo/
 ├── .vscode/
 ├── dist/
